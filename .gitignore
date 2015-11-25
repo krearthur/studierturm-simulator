@@ -37,4 +37,4 @@ Thumbs.db
 custom Files / folders that should not be in repo
 # ========== #
 Build/
-*"Standard Assets"/
+Assets/Standard Assets/
