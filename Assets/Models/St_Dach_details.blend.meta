@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: b9712d9a43877ef44a6816c07013e7ee
+timeCreated: 1448366260
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Antenne
+    100002: Antenne_001
+    100004: Antenne_002
+    100006: Antenne_003
+    100008: Antenne_004
+    100010: dach-trashbin_right
+    100012: dach-trashbin_right_001
+    100014: dachabzug_left
+    100016: dachbank
+    100018: dachbank_001
+    100020: dachbank_003
+    100022: dachbank_011
+    100024: dachbank_012
+    100026: dachbank_013
+    100028: dachbank_014
+    100030: dachbank_015
+    100032: dachbank_016
+    100034: dachbank_017
+    100036: dachbank_018
+    100038: feuerkasten_right
+    100040: feuerkasten_right_001
+    100042: raucheimer_right
+    100044: raucheimer_right_001
+    100046: Schornstein
+    100048: //RootNode
+    400000: Antenne
+    400002: Antenne_001
+    400004: Antenne_002
+    400006: Antenne_003
+    400008: Antenne_004
+    400010: dach-trashbin_right
+    400012: dach-trashbin_right_001
+    400014: dachabzug_left
+    400016: dachbank
+    400018: dachbank_001
+    400020: dachbank_003
+    400022: dachbank_011
+    400024: dachbank_012
+    400026: dachbank_013
+    400028: dachbank_014
+    400030: dachbank_015
+    400032: dachbank_016
+    400034: dachbank_017
+    400036: dachbank_018
+    400038: feuerkasten_right
+    400040: feuerkasten_right_001
+    400042: raucheimer_right
+    400044: raucheimer_right_001
+    400046: Schornstein
+    400048: //RootNode
+    2300000: Antenne
+    2300002: Antenne_001
+    2300004: Antenne_002
+    2300006: Antenne_003
+    2300008: Antenne_004
+    2300010: dach-trashbin_right
+    2300012: dach-trashbin_right_001
+    2300014: dachabzug_left
+    2300016: dachbank
+    2300018: dachbank_001
+    2300020: dachbank_003
+    2300022: dachbank_011
+    2300024: dachbank_012
+    2300026: dachbank_013
+    2300028: dachbank_014
+    2300030: dachbank_015
+    2300032: dachbank_016
+    2300034: dachbank_017
+    2300036: dachbank_018
+    2300038: feuerkasten_right
+    2300040: feuerkasten_right_001
+    2300042: raucheimer_right
+    2300044: raucheimer_right_001
+    2300046: Schornstein
+    3300000: Antenne
+    3300002: Antenne_001
+    3300004: Antenne_002
+    3300006: Antenne_003
+    3300008: Antenne_004
+    3300010: dach-trashbin_right
+    3300012: dach-trashbin_right_001
+    3300014: dachabzug_left
+    3300016: dachbank
+    3300018: dachbank_001
+    3300020: dachbank_003
+    3300022: dachbank_011
+    3300024: dachbank_012
+    3300026: dachbank_013
+    3300028: dachbank_014
+    3300030: dachbank_015
+    3300032: dachbank_016
+    3300034: dachbank_017
+    3300036: dachbank_018
+    3300038: feuerkasten_right
+    3300040: feuerkasten_right_001
+    3300042: raucheimer_right
+    3300044: raucheimer_right_001
+    3300046: Schornstein
+    4300000: Schornstein
+    4300002: Antenne_004
+    4300004: Antenne_003
+    4300006: Antenne_002
+    4300008: Antenne_001
+    4300010: Antenne
+    4300012: dach-trashbin_right_001
+    4300014: feuerkasten_right_001
+    4300016: raucheimer_right_001
+    4300018: dachbank_003
+    4300020: dachbank_018
+    4300022: dachbank_017
+    4300024: dachbank_016
+    4300026: dachbank_015
+    4300028: dachbank_014
+    4300030: dachbank_013
+    4300032: dachbank_012
+    4300034: dachbank_011
+    4300036: dachabzug_left
+    4300038: raucheimer_right
+    4300040: feuerkasten_right
+    4300042: dach-trashbin_right
+    4300044: dachbank_001
+    4300046: dachbank
+    6400000: Antenne
+    6400002: Antenne_001
+    6400004: Antenne_002
+    6400006: Antenne_003
+    6400008: Antenne_004
+    6400010: dach-trashbin_right
+    6400012: dach-trashbin_right_001
+    6400014: dachabzug_left
+    6400016: dachbank
+    6400018: dachbank_001
+    6400020: dachbank_003
+    6400022: dachbank_011
+    6400024: dachbank_012
+    6400026: dachbank_013
+    6400028: dachbank_014
+    6400030: dachbank_015
+    6400032: dachbank_016
+    6400034: dachbank_017
+    6400036: dachbank_018
+    6400038: feuerkasten_right
+    6400040: feuerkasten_right_001
+    6400042: raucheimer_right
+    6400044: raucheimer_right_001
+    6400046: Schornstein
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

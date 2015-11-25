@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: 29b0c2ebfcde83f458aa4b59e068bf30
+timeCreated: 1439581539
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Aufzug_armature_left
+    100002: Aufzug_left
+    100004: button_innen_alarm_left
+    100006: button_innen_e0_left
+    100008: button_innen_e1_left
+    100010: button_innen_e2_left
+    100012: button_innen_e3_left
+    100014: button_innen_e4_left
+    100016: button_innen_e5_left
+    100018: button_innen_e6_left
+    100020: button_innen_e7_left
+    100022: button_innen_e8_left
+    100024: button_innen_key_left
+    100026: button_innen_open_left
+    100028: Elevator_doors
+    100030: elv_door_inner_1
+    100032: elv_door_inner_2
+    100034: Haltestange
+    100036: Kellerschild
+    100038: Kontrollpanel_left
+    100040: Spiegel
+    100042: //RootNode
+    100044: terminal_infos_004
+    100046: terminal_infos_005
+    100048: terminal_infos_006
+    100050: terminal_infos_007
+    100052: terminal_infos_009
+    100054: terminal_keyhole_001
+    100056: terminal_LED_screen_right_001
+    400000: Aufzug_armature_left
+    400002: Aufzug_left
+    400004: button_innen_alarm_left
+    400006: button_innen_e0_left
+    400008: button_innen_e1_left
+    400010: button_innen_e2_left
+    400012: button_innen_e3_left
+    400014: button_innen_e4_left
+    400016: button_innen_e5_left
+    400018: button_innen_e6_left
+    400020: button_innen_e7_left
+    400022: button_innen_e8_left
+    400024: button_innen_key_left
+    400026: button_innen_open_left
+    400028: Elevator_doors
+    400030: elv_door_inner_1
+    400032: elv_door_inner_2
+    400034: Haltestange
+    400036: Kellerschild
+    400038: Kontrollpanel_left
+    400040: Spiegel
+    400042: //RootNode
+    400044: terminal_infos_004
+    400046: terminal_infos_005
+    400048: terminal_infos_006
+    400050: terminal_infos_007
+    400052: terminal_infos_009
+    400054: terminal_keyhole_001
+    400056: terminal_LED_screen_right_001
+    2300000: Aufzug_left
+    2300002: button_innen_alarm_left
+    2300004: button_innen_e0_left
+    2300006: button_innen_e1_left
+    2300008: button_innen_e2_left
+    2300010: button_innen_e3_left
+    2300012: button_innen_e4_left
+    2300014: button_innen_e5_left
+    2300016: button_innen_e6_left
+    2300018: button_innen_e7_left
+    2300020: button_innen_e8_left
+    2300022: button_innen_key_left
+    2300024: button_innen_open_left
+    2300026: Haltestange
+    2300028: Kellerschild
+    2300030: Kontrollpanel_left
+    2300032: Spiegel
+    2300034: terminal_infos_004
+    2300036: terminal_infos_005
+    2300038: terminal_infos_006
+    2300040: terminal_infos_007
+    2300042: terminal_infos_009
+    2300044: terminal_keyhole_001
+    2300046: terminal_LED_screen_right_001
+    3300000: Aufzug_left
+    3300002: button_innen_alarm_left
+    3300004: button_innen_e0_left
+    3300006: button_innen_e1_left
+    3300008: button_innen_e2_left
+    3300010: button_innen_e3_left
+    3300012: button_innen_e4_left
+    3300014: button_innen_e5_left
+    3300016: button_innen_e6_left
+    3300018: button_innen_e7_left
+    3300020: button_innen_e8_left
+    3300022: button_innen_key_left
+    3300024: button_innen_open_left
+    3300026: Haltestange
+    3300028: Kellerschild
+    3300030: Kontrollpanel_left
+    3300032: Spiegel
+    3300034: terminal_infos_004
+    3300036: terminal_infos_005
+    3300038: terminal_infos_006
+    3300040: terminal_infos_007
+    3300042: terminal_infos_009
+    3300044: terminal_keyhole_001
+    3300046: terminal_LED_screen_right_001
+    4300000: Aufzug_left
+    4300002: terminal_infos_009
+    4300004: Kellerschild
+    4300006: Kontrollpanel_left
+    4300008: terminal_keyhole_001
+    4300010: terminal_infos_007
+    4300012: terminal_infos_006
+    4300014: terminal_infos_005
+    4300016: terminal_infos_004
+    4300018: terminal_LED_screen_right_001
+    4300020: button_innen_open_left
+    4300022: button_innen_alarm_left
+    4300024: button_innen_e5_left
+    4300026: button_innen_e3_left
+    4300028: button_innen_e1_left
+    4300030: button_innen_key_left
+    4300032: button_innen_e6_left
+    4300034: button_innen_e4_left
+    4300036: button_innen_e2_left
+    4300038: button_innen_e0_left
+    4300040: button_innen_e7_left
+    4300042: button_innen_e8_left
+    4300044: Haltestange
+    4300046: Spiegel
+    4300048: Elevator_doors
+    6400000: Aufzug_left
+    6400002: button_innen_alarm_left
+    6400004: button_innen_e0_left
+    6400006: button_innen_e1_left
+    6400008: button_innen_e2_left
+    6400010: button_innen_e3_left
+    6400012: button_innen_e4_left
+    6400014: button_innen_e5_left
+    6400016: button_innen_e6_left
+    6400018: button_innen_e7_left
+    6400020: button_innen_e8_left
+    6400022: button_innen_key_left
+    6400024: button_innen_open_left
+    6400026: Haltestange
+    6400028: Kellerschild
+    6400030: Kontrollpanel_left
+    6400032: Spiegel
+    6400034: terminal_infos_004
+    6400036: terminal_infos_005
+    6400038: terminal_infos_006
+    6400040: terminal_infos_007
+    6400042: terminal_infos_009
+    6400044: terminal_keyhole_001
+    6400046: terminal_LED_screen_right_001
+    7400000: Default Take
+    7400002: Door_close
+    7400004: Door_open
+    9500000: //RootNode
+    13700000: Elevator_doors
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Door_close
+      takeName: Door_close
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Aufzug_left
+        weight: 1
+      - path: Aufzug_left/Aufzug_armature_left
+        weight: 1
+      - path: Aufzug_left/Aufzug_armature_left/elv_door_inner_1
+        weight: 1
+      - path: Aufzug_left/Aufzug_armature_left/elv_door_inner_2
+        weight: 1
+      - path: Aufzug_left/Haltestange
+        weight: 1
+      - path: Aufzug_left/Kellerschild
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_alarm_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e0_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e1_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e2_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e3_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e4_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e5_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e6_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e7_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e8_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_key_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_open_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_infos_004
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_infos_005
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_infos_006
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_infos_007
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_keyhole_001
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_LED_screen_right_001
+        weight: 1
+      - path: Aufzug_left/Spiegel
+        weight: 1
+      - path: Aufzug_left/terminal_infos_009
+        weight: 1
+      - path: Elevator_doors
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Door_open
+      takeName: Door_open
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Aufzug_left
+        weight: 1
+      - path: Aufzug_left/Aufzug_armature_left
+        weight: 1
+      - path: Aufzug_left/Aufzug_armature_left/elv_door_inner_1
+        weight: 1
+      - path: Aufzug_left/Aufzug_armature_left/elv_door_inner_2
+        weight: 1
+      - path: Aufzug_left/Haltestange
+        weight: 1
+      - path: Aufzug_left/Kellerschild
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_alarm_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e0_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e1_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e2_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e3_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e4_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e5_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e6_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e7_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_e8_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_key_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/button_innen_open_left
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_infos_004
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_infos_005
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_infos_006
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_infos_007
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_keyhole_001
+        weight: 1
+      - path: Aufzug_left/Kontrollpanel_left/terminal_LED_screen_right_001
+        weight: 1
+      - path: Aufzug_left/Spiegel
+        weight: 1
+      - path: Aufzug_left/terminal_infos_009
+        weight: 1
+      - path: Elevator_doors
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
