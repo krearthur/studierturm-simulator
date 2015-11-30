@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: dc9083006a68de047b186cea63fe1133
+timeCreated: 1448921890
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: treppenboden_000
+    100004: treppenboden_001
+    100006: Treppengel_nder_000
+    100008: Treppengel_nder_001
+    100010: Treppengel_nder_002
+    100012: Treppengel_nder_003
+    100014: Treppenstangen_000
+    100016: Treppenstangen_001
+    100018: Treppenstangen_002
+    100020: Treppenstangen_003
+    100022: Treppenstangen_004
+    100024: Treppenstangen_005
+    100026: Treppenstangen_006
+    100028: Treppenstangen_007
+    100030: Treppenstangen_008
+    100032: Treppenstangen_009
+    400000: //RootNode
+    400002: treppenboden_000
+    400004: treppenboden_001
+    400006: Treppengel_nder_000
+    400008: Treppengel_nder_001
+    400010: Treppengel_nder_002
+    400012: Treppengel_nder_003
+    400014: Treppenstangen_000
+    400016: Treppenstangen_001
+    400018: Treppenstangen_002
+    400020: Treppenstangen_003
+    400022: Treppenstangen_004
+    400024: Treppenstangen_005
+    400026: Treppenstangen_006
+    400028: Treppenstangen_007
+    400030: Treppenstangen_008
+    400032: Treppenstangen_009
+    2300000: treppenboden_000
+    2300002: treppenboden_001
+    2300004: Treppengel_nder_000
+    2300006: Treppengel_nder_001
+    2300008: Treppengel_nder_002
+    2300010: Treppengel_nder_003
+    2300012: Treppenstangen_000
+    2300014: Treppenstangen_001
+    2300016: Treppenstangen_002
+    2300018: Treppenstangen_003
+    2300020: Treppenstangen_004
+    2300022: Treppenstangen_005
+    2300024: Treppenstangen_006
+    2300026: Treppenstangen_007
+    2300028: Treppenstangen_008
+    2300030: Treppenstangen_009
+    3300000: treppenboden_000
+    3300002: treppenboden_001
+    3300004: Treppengel_nder_000
+    3300006: Treppengel_nder_001
+    3300008: Treppengel_nder_002
+    3300010: Treppengel_nder_003
+    3300012: Treppenstangen_000
+    3300014: Treppenstangen_001
+    3300016: Treppenstangen_002
+    3300018: Treppenstangen_003
+    3300020: Treppenstangen_004
+    3300022: Treppenstangen_005
+    3300024: Treppenstangen_006
+    3300026: Treppenstangen_007
+    3300028: Treppenstangen_008
+    3300030: Treppenstangen_009
+    4300000: treppenboden_001
+    4300002: Treppenstangen_003
+    4300004: Treppenstangen_002
+    4300006: Treppengel_nder_000
+    4300008: Treppenstangen_001
+    4300010: Treppenstangen_000
+    4300012: treppenboden_000
+    4300014: Treppengel_nder_003
+    4300016: Treppenstangen_009
+    4300018: Treppenstangen_008
+    4300020: Treppengel_nder_002
+    4300022: Treppenstangen_007
+    4300024: Treppenstangen_006
+    4300026: Treppengel_nder_001
+    4300028: Treppenstangen_005
+    4300030: Treppenstangen_004
+    6400000: treppenboden_000
+    6400002: treppenboden_001
+    6400004: Treppengel_nder_000
+    6400006: Treppengel_nder_001
+    6400008: Treppengel_nder_002
+    6400010: Treppengel_nder_003
+    6400012: Treppenstangen_000
+    6400014: Treppenstangen_001
+    6400016: Treppenstangen_002
+    6400018: Treppenstangen_003
+    6400020: Treppenstangen_004
+    6400022: Treppenstangen_005
+    6400024: Treppenstangen_006
+    6400026: Treppenstangen_007
+    6400028: Treppenstangen_008
+    6400030: Treppenstangen_009
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
