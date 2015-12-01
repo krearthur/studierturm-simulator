@@ -76,6 +76,46 @@ ModelImporter:
     100136: //RootNode
     100138: Wandnummer
     100140: Wandnummer_001
+    100142: Fensterbank
+    100144: Fensterbank_001
+    100146: Fensterbank_002
+    100148: Fensterbank_003
+    100150: Fensterbank_004
+    100152: Fensterbank_005
+    100154: Fensterbank_006
+    100156: Fensterbank_007
+    100158: Fensterbank_008
+    100160: Fensterbank_009
+    100162: Fensterbank_010
+    100164: Fensterbank_011
+    100166: Fensterbank_012
+    100168: Fensterbank_013
+    100170: Fensterbank_014
+    100172: Fensterbank_015
+    100174: Fensterbank_016
+    100176: floor_000
+    100178: floor_001
+    100180: floor_002
+    100182: floor_004
+    100184: floor_005
+    100186: floor_006
+    100188: Heizung
+    100190: Heizung_001
+    100192: Heizung_002
+    100194: Heizung_003
+    100196: Heizung_004
+    100198: Heizung_005
+    100200: Heizung_006
+    100202: Heizung_007
+    100204: Heizung_008
+    100206: Heizung_009
+    100208: Heizung_010
+    100210: Heizung_011
+    100212: Heizung_012
+    100214: Heizung_013
+    100216: Heizung_014
+    100218: Heizung_015
+    100220: Heizung_016
     400000: Doorbell
     400002: Doorbell_001
     400004: Doorbell_002
@@ -147,6 +187,46 @@ ModelImporter:
     400136: //RootNode
     400138: Wandnummer
     400140: Wandnummer_001
+    400142: Fensterbank
+    400144: Fensterbank_001
+    400146: Fensterbank_002
+    400148: Fensterbank_003
+    400150: Fensterbank_004
+    400152: Fensterbank_005
+    400154: Fensterbank_006
+    400156: Fensterbank_007
+    400158: Fensterbank_008
+    400160: Fensterbank_009
+    400162: Fensterbank_010
+    400164: Fensterbank_011
+    400166: Fensterbank_012
+    400168: Fensterbank_013
+    400170: Fensterbank_014
+    400172: Fensterbank_015
+    400174: Fensterbank_016
+    400176: floor_000
+    400178: floor_001
+    400180: floor_002
+    400182: floor_004
+    400184: floor_005
+    400186: floor_006
+    400188: Heizung
+    400190: Heizung_001
+    400192: Heizung_002
+    400194: Heizung_003
+    400196: Heizung_004
+    400198: Heizung_005
+    400200: Heizung_006
+    400202: Heizung_007
+    400204: Heizung_008
+    400206: Heizung_009
+    400208: Heizung_010
+    400210: Heizung_011
+    400212: Heizung_012
+    400214: Heizung_013
+    400216: Heizung_014
+    400218: Heizung_015
+    400220: Heizung_016
     2300000: Doorbell
     2300002: Doorbell_001
     2300004: Doorbell_002
@@ -217,6 +297,46 @@ ModelImporter:
     2300134: Rohrleitung_016
     2300136: Wandnummer
     2300138: Wandnummer_001
+    2300140: Fensterbank
+    2300142: Fensterbank_001
+    2300144: Fensterbank_002
+    2300146: Fensterbank_003
+    2300148: Fensterbank_004
+    2300150: Fensterbank_005
+    2300152: Fensterbank_006
+    2300154: Fensterbank_007
+    2300156: Fensterbank_008
+    2300158: Fensterbank_009
+    2300160: Fensterbank_010
+    2300162: Fensterbank_011
+    2300164: Fensterbank_012
+    2300166: Fensterbank_013
+    2300168: Fensterbank_014
+    2300170: Fensterbank_015
+    2300172: Fensterbank_016
+    2300174: floor_000
+    2300176: floor_001
+    2300178: floor_002
+    2300180: floor_004
+    2300182: floor_005
+    2300184: floor_006
+    2300186: Heizung
+    2300188: Heizung_001
+    2300190: Heizung_002
+    2300192: Heizung_003
+    2300194: Heizung_004
+    2300196: Heizung_005
+    2300198: Heizung_006
+    2300200: Heizung_007
+    2300202: Heizung_008
+    2300204: Heizung_009
+    2300206: Heizung_010
+    2300208: Heizung_011
+    2300210: Heizung_012
+    2300212: Heizung_013
+    2300214: Heizung_014
+    2300216: Heizung_015
+    2300218: Heizung_016
     3300000: Doorbell
     3300002: Doorbell_001
     3300004: Doorbell_002
@@ -287,6 +407,46 @@ ModelImporter:
     3300134: Rohrleitung_016
     3300136: Wandnummer
     3300138: Wandnummer_001
+    3300140: Fensterbank
+    3300142: Fensterbank_001
+    3300144: Fensterbank_002
+    3300146: Fensterbank_003
+    3300148: Fensterbank_004
+    3300150: Fensterbank_005
+    3300152: Fensterbank_006
+    3300154: Fensterbank_007
+    3300156: Fensterbank_008
+    3300158: Fensterbank_009
+    3300160: Fensterbank_010
+    3300162: Fensterbank_011
+    3300164: Fensterbank_012
+    3300166: Fensterbank_013
+    3300168: Fensterbank_014
+    3300170: Fensterbank_015
+    3300172: Fensterbank_016
+    3300174: floor_000
+    3300176: floor_001
+    3300178: floor_002
+    3300180: floor_004
+    3300182: floor_005
+    3300184: floor_006
+    3300186: Heizung
+    3300188: Heizung_001
+    3300190: Heizung_002
+    3300192: Heizung_003
+    3300194: Heizung_004
+    3300196: Heizung_005
+    3300198: Heizung_006
+    3300200: Heizung_007
+    3300202: Heizung_008
+    3300204: Heizung_009
+    3300206: Heizung_010
+    3300208: Heizung_011
+    3300210: Heizung_012
+    3300212: Heizung_013
+    3300214: Heizung_014
+    3300216: Heizung_015
+    3300218: Heizung_016
     4300000: Wandnummer_001
     4300002: Wandnummer
     4300004: Rohrleitung_016
@@ -357,6 +517,46 @@ ModelImporter:
     4300134: Rohrleitung_002
     4300136: Rohrleitung_000
     4300138: Rohrleitung_001
+    4300140: Heizung
+    4300142: Fensterbank_001
+    4300144: Fensterbank_002
+    4300146: Fensterbank_003
+    4300148: Fensterbank_004
+    4300150: Fensterbank_005
+    4300152: Fensterbank_006
+    4300154: Fensterbank_007
+    4300156: Fensterbank_008
+    4300158: Fensterbank_009
+    4300160: Fensterbank_010
+    4300162: Fensterbank_011
+    4300164: Fensterbank_012
+    4300166: Fensterbank_013
+    4300168: Fensterbank_014
+    4300170: Fensterbank_015
+    4300172: Fensterbank_016
+    4300174: Fensterbank
+    4300176: floor_000
+    4300178: floor_001
+    4300180: floor_002
+    4300182: floor_004
+    4300184: floor_005
+    4300186: floor_006
+    4300188: Heizung_016
+    4300190: Heizung_015
+    4300192: Heizung_014
+    4300194: Heizung_013
+    4300196: Heizung_012
+    4300198: Heizung_011
+    4300200: Heizung_010
+    4300202: Heizung_009
+    4300204: Heizung_008
+    4300206: Heizung_007
+    4300208: Heizung_006
+    4300210: Heizung_005
+    4300212: Heizung_004
+    4300214: Heizung_003
+    4300216: Heizung_002
+    4300218: Heizung_001
     6400000: Doorbell
     6400002: Doorbell_001
     6400004: Doorbell_002
