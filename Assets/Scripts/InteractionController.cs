@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 // attach to player
-public class DoorOpenSkill : MonoBehaviour {
+public class InteractionController : MonoBehaviour {
     
     public ObjectsInTrigger frontObjects;
     public ObjectsInRaycast interactiveRaycastObjects;
@@ -13,14 +14,18 @@ public class DoorOpenSkill : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (interactiveRaycastObjects.hasObjects && Input.GetButtonDown("Interact")) {
+        if (interactiveRaycastObjects.hasObjects && Input.GetButtonDown("Action")) {
             foreach (RaycastHit hit in interactiveRaycastObjects.hits) {
                 if (hit.collider.CompareTag("Door")) {
                     hit.collider.GetComponent<OpenDoorEvent>().Run();
                 }
+                else if (hit.collider.CompareTag("ButtonsPanel")) {
+                    hit.collider.GetComponent<FixViewToElevatorButtons>().Init(GetComponentInChildren<Camera>(), 
+                        new MonoBehaviour[] { GetComponent<FirstPersonController>(), this, frontObjects, interactiveRaycastObjects });
+                }
                 else {
                     if(hit.collider.GetComponent<Interactable>() != null) {
-                        hit.collider.GetComponent<Interactable>().Interact();
+                        hit.collider.GetComponent<Interactable>().Interact(gameObject);
                     }
                 }
             }

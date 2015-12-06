@@ -127,7 +127,7 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
         
     }
 
-    public void Interact() {
+    public void Interact(GameObject source) {
         audio.PlayOneShot(buttonClickSound);
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Closing")) {
             InterruptClosing();
