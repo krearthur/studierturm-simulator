@@ -3,8 +3,8 @@ using System.Collections;
 
 public class ToggleActivation : MonoBehaviour {
 
-    public GameObject[] targetObjects;
-    public bool onTriggerSetActiveTo = false;
+    public GameObject[] activateObjects;
+    public GameObject[] deactivateObjects;
     public string playerTag = "Player";
 
 	// Use this for initialization
@@ -19,9 +19,12 @@ public class ToggleActivation : MonoBehaviour {
 
     void OnTriggerEnter(Collider col) {
         if (col.CompareTag(playerTag)) {
-            foreach (GameObject section in targetObjects) { 
-                section.SetActive(onTriggerSetActiveTo);
-            }   
+            foreach (GameObject section in activateObjects) { 
+                section.SetActive(true);
+            }
+            foreach (GameObject section in deactivateObjects) {
+                section.SetActive(false);
+            }
         }
     }
 }
