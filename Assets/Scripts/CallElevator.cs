@@ -12,12 +12,14 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     public AudioClip openingSound;
     public AudioClip closingSound;
     public AudioClip buttonClickSound;
-
-    public Texture activeButtons;
-    public Renderer statusButton;
-
-    private Texture passiveButtons;
-    private Renderer rend;
+    
+    public Renderer callButton;
+    public Renderer statusButtonRend;
+    public Texture buttonsActiveTex;
+    private Texture buttonsInActiveTex;
+    private Color buttonsInActiveColor;
+    
+    private Renderer callButtonRend;
     private AudioSource audio;
 
     public Collider doorColliders;
@@ -28,13 +30,17 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     private bool interruptToOpen;
     private bool waitingForElevator;
 
+    private bool statusBtnIsOn;
+    private bool callBtnIsOn;
+
     void Start() {
-        rend = GetComponent<Renderer>();
+        callButtonRend = callButton.GetComponent<Renderer>();
         audio = GetComponent<AudioSource>();
         foreach (SlidingDoorStateBehaviour behaviour in animator.GetBehaviours<SlidingDoorStateBehaviour>()) {
             behaviour.AddListener(this);
         }
-        passiveButtons = rend.material.mainTexture;
+        buttonsInActiveTex = callButtonRend.material.mainTexture;
+        buttonsInActiveColor = callButtonRend.material.GetColor("_EmissionColor");
         currentBlinkTime = 0;
         elevator.AddListener(this);
     }
@@ -44,8 +50,7 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
             currentBlinkTime += Time.deltaTime;
             if (currentBlinkTime >= blinkInterval) {
                 currentBlinkTime = 0;
-                statusButton.material.mainTexture = 
-                    statusButton.material.mainTexture == activeButtons ? passiveButtons : activeButtons;
+                StatusBtnLight(!statusBtnIsOn);
             }
         }
     }
@@ -75,9 +80,9 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     }
 
     void SlidingDoorListener.DoorClosed() {
-        rend.material.mainTexture = passiveButtons;
         blinking = false;
-        statusButton.material.mainTexture = passiveButtons;
+        StatusBtnLight(blinking);
+        CallBtnLight(blinking);
     }
 
 
@@ -96,8 +101,7 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     }
 
     void ElevatorListener.FloorArrived(Floor arrived) {
-        
-        statusButton.material.mainTexture = activeButtons;
+        StatusBtnLight(true);
         if (floorOfCallButton == arrived) {
             blinking = true;
         }
@@ -129,9 +133,22 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
             InterruptClosing();
         }
         else if (!waitingForElevator && animator.GetCurrentAnimatorStateInfo(0).IsName("Closed")) {
-            rend.material.mainTexture = activeButtons;
+            CallBtnLight(true);
             elevator.CallToFloor(floorOfCallButton);
             waitingForElevator = true;
         }
+    }
+
+    private void StatusBtnLight(bool shouldLit) {
+        statusButtonRend.material.mainTexture = shouldLit ? buttonsActiveTex : buttonsInActiveTex;
+        statusButtonRend.material.SetColor("_EmissionColor", shouldLit ? Color.white : buttonsInActiveColor);
+
+        statusBtnIsOn = shouldLit;
+    }
+    private void CallBtnLight(bool shouldLit) {
+        callButtonRend.material.mainTexture = shouldLit ? buttonsActiveTex : buttonsInActiveTex;
+        callButtonRend.material.SetColor("_EmissionColor", shouldLit ? Color.white : buttonsInActiveColor);
+        
+        callBtnIsOn = shouldLit;
     }
 }
