@@ -39,3 +39,5 @@ custom Files / folders that should not be in repo
 # ========== #
 Build/
 Assets/Standard Assets/
+roh_sounds/
+models/
