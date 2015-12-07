@@ -60,9 +60,9 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
                 targetFloors &= ~(int)currentFloor;
                 if (IsClosed()) {
                     animator.SetTrigger("OpenTrigger");
+                    FloorArrived();
                 }
                 
-                FloorArrived();
             }
         }
         else if (drivingUp) {
@@ -78,9 +78,15 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         if (IsStanding()) {
             if ((int)currentFloor > (int)floor) {
                 drivingDown = true;
+                foreach (ElevatorListener listener in listeners) {
+                    listener.DrivingDown();
+                }
             }
             else if ((int)currentFloor < (int)floor) {
                 drivingUp = true;
+                foreach (ElevatorListener listener in listeners) {
+                    listener.DrivingUp();
+                }
             }
         }
         CalculateTargetFloorPosition();
@@ -141,6 +147,14 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     public Floor GetCurrentFloor() {
         return currentFloor;
     }
+
+    public void OpenDoorsCall() {
+        if (IsStanding()) {
+            if (IsClosed() || IsClosing()) {
+                animator.SetTrigger("OpenTrigger");
+            }
+        }
+    }
     
     public bool IsStanding() {
         return drivingUp == false && drivingDown == false;
@@ -148,6 +162,15 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
 
     public bool IsClosed() {
         return animator.GetCurrentAnimatorStateInfo(0).IsName("Closed");
+    }
+    public bool IsClosing() {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName("Closing");
+    }
+    public bool IsOpen() {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName("Open");
+    }
+    public bool IsOpening() {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName("Opening");
     }
 
     public bool IsDrivingUp() {
@@ -178,10 +201,15 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     }
 
     void SlidingDoorListener.DoorClosed() {
-
+        foreach (ElevatorListener listener in listeners) {
+            listener.ElevatorClosed();
+        }
     }
 
     void SlidingDoorListener.DoorOpened() {
         doorColliders.isTrigger = true;
+        foreach (ElevatorListener listener in listeners) {
+            listener.ElevatorOpened();
+        }
     }
 }

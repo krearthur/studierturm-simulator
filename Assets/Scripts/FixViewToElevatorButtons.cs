@@ -27,6 +27,8 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
             if (Input.GetButtonDown("Cancel")) {
                 transformAnimator.InvertedStart();
             }
+            Cursor.visible = true;
+            
         }else if (transformAnimator.movingBackToSource) {
             // back to player mode
             foreach (MonoBehaviour comp in componentsToToggle) {
@@ -37,6 +39,7 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
             
             transformAnimator.Reset();
             transformAnimator.SetToTargetValues(targetCamera.transform);
+            Cursor.visible = false;
         }
 	}
 
@@ -50,7 +53,7 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
         sourceCamera.gameObject.SetActive(false);
         targetCamera.gameObject.SetActive(true);
         
-        transformAnimator.Init(sourceCamera.transform, targetCamera.transform, .5f);
+        transformAnimator.Init(sourceCamera.transform, targetCamera.transform, .25f);
         transformAnimator.SetToSourceValues(targetCamera.transform);
     }
 

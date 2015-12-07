@@ -37,4 +37,10 @@ public class ObjectsInRaycast : MonoBehaviour {
         
 	}
     
+    void OnDisable() {
+        cursorImage.enabled = false;
+    }
+    void OnEnable() {
+        cursorImage.enabled = true;
+    }
 }
