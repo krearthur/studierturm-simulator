@@ -5,23 +5,22 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
 
     private Camera sourceCamera;
-    public Camera targetCamera;
+    public Transform targetCameraTransform;
 
     private MonoBehaviour[] componentsToToggle;
 
-    private TransformAnimator transformAnimator;
+	private TransformAnimator transformAnimator = new TransformAnimator();
     
 	// Use this for initialization
 	void Start () {
-        targetCamera.gameObject.SetActive(false);
-        transformAnimator = new TransformAnimator();
+        targetCameraTransform.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (transformAnimator.Tick(Time.deltaTime)) {
-            targetCamera.transform.position = transformAnimator.position;
-            targetCamera.transform.rotation = transformAnimator.rotation;
+			sourceCamera.transform.position = transformAnimator.position;
+			sourceCamera.transform.rotation = transformAnimator.rotation;
         }else if (transformAnimator.reachedTarget) {
             // click button mode
             if (Input.GetButtonDown("Cancel")) {
@@ -34,11 +33,7 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
             foreach (MonoBehaviour comp in componentsToToggle) {
                 comp.enabled = true;
             }
-            sourceCamera.gameObject.SetActive(true);
-            targetCamera.gameObject.SetActive(false);
-            
             transformAnimator.Reset();
-            transformAnimator.SetToTargetValues(targetCamera.transform);
             Cursor.visible = false;
         }
 	}
@@ -50,11 +45,7 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
         }
 
         this.sourceCamera = cam;
-        sourceCamera.gameObject.SetActive(false);
-        targetCamera.gameObject.SetActive(true);
-        
-        transformAnimator.Init(sourceCamera.transform, targetCamera.transform, .25f);
-        transformAnimator.SetToSourceValues(targetCamera.transform);
+        transformAnimator.Init(sourceCamera.transform, targetCameraTransform, .25f);
     }
 
     public void Interact(GameObject source) {

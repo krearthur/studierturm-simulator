@@ -38,9 +38,16 @@ public class OpenDoorEvent : MonoBehaviour {
         if (!running) {
             currentOpenTime = keepOpenDuration;
             currentAnimationTime = 0;
-            opening = true;
-            isOpen = false;
-            closing = false;
+			if(!isOpen){
+				opening = true;
+				closing = false;
+			}
+            else{
+				closing = true;
+				opening = false;
+			}
+			GetComponent<Collider>().isTrigger = true;
+
             running = true;
             this.enabled = true;
         }
@@ -49,10 +56,10 @@ public class OpenDoorEvent : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (opening) {
-            GetComponent<Collider>().isTrigger = true;
             if(currentAnimationTime >= animationDuration) {
                 opening = false;
                 isOpen = true;
+				GetComponent<Collider>().isTrigger = false;
                 audioSource.PlayOneShot(openSound);
             }
             else {
@@ -63,7 +70,7 @@ public class OpenDoorEvent : MonoBehaviour {
             }
             
         }
-        else if (isOpen) {
+		/* else if (isOpen) {
             if(currentOpenTime <= 0) {
                 isOpen = false;
                 closing = true;
@@ -72,7 +79,7 @@ public class OpenDoorEvent : MonoBehaviour {
             else {
                 currentOpenTime -= Time.deltaTime;
             }
-        }
+        }*/
         else if (closing) {
             if (currentAnimationTime <= 0) {
                 audioSource.PlayOneShot(closeSound);

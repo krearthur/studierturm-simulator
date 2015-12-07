@@ -4,13 +4,12 @@ using System.Collections;
 
 public class ObjectsInRaycast : MonoBehaviour {
 
-    public Sprite defaultCursor;
-    public Sprite interactCursor;
+    public Texture defaultCursor;
+    public Texture interactCursor;
 
     public RaycastHit[] hits;
     public bool hasObjects;
 
-    public Image cursorImage;
 
     public LayerMask interactiveObjectsMask;
 
@@ -28,19 +27,18 @@ public class ObjectsInRaycast : MonoBehaviour {
 
         if(hits != null && hits.Length>0) {
             hasObjects = true;
-            cursorImage.sprite = interactCursor;
         }
         else {
             hasObjects = false;
-            cursorImage.sprite = defaultCursor;
+            
         }
         
 	}
     
     void OnDisable() {
-        cursorImage.enabled = false;
+
     }
     void OnEnable() {
-        cursorImage.enabled = true;
+
     }
 }
