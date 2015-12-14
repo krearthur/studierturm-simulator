@@ -4,14 +4,17 @@ using System.Collections;
 
 public class ObjectsInRaycast : MonoBehaviour {
 
-    public Texture defaultCursor;
-    public Texture interactCursor;
+    public Sprite defaultCursor;
+    public Sprite interactCursor;
 
-    public RaycastHit[] hits;
+    public Image uiCursor;
+
+    public RaycastHit hits;
     public bool hasObjects;
 
 
     public LayerMask interactiveObjectsMask;
+    public LayerMask ignoreLayersMask;
 
 	// Use this for initialization
 	void Start () {
@@ -22,23 +25,23 @@ public class ObjectsInRaycast : MonoBehaviour {
 	void Update () {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f));
 
-        hits = Physics.RaycastAll(ray, 1.1f, interactiveObjectsMask.value);
+        
         Debug.DrawRay(ray.origin, ray.direction);
-
-        if(hits != null && hits.Length>0) {
-            hasObjects = true;
-        }
-        else {
-            hasObjects = false;
-            
+        hasObjects = false;
+        uiCursor.sprite = defaultCursor;
+        if (Physics.Raycast(ray.origin, ray.direction, out hits, 1.1f, ~ignoreLayersMask.value)) {
+            if((hits.collider.gameObject.layer & ~interactiveObjectsMask.value) != 0) {
+                hasObjects = true;
+                uiCursor.sprite = interactCursor;
+            }
         }
         
 	}
     
     void OnDisable() {
-
+        uiCursor.enabled = false;
     }
     void OnEnable() {
-
+        uiCursor.enabled = true;
     }
 }

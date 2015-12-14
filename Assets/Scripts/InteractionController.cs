@@ -15,20 +15,20 @@ public class InteractionController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (interactiveRaycastObjects.hasObjects && Input.GetButtonDown("Action")) {
-            foreach (RaycastHit hit in interactiveRaycastObjects.hits) {
-                if (hit.collider.CompareTag("Door")) {
-                    hit.collider.GetComponent<OpenDoorEvent>().Run();
-                }
-                else if (hit.collider.CompareTag("ButtonsPanel")) {
-                    hit.collider.GetComponent<FixViewToElevatorButtons>().Init(GetComponentInChildren<Camera>(), 
-                        new MonoBehaviour[] { GetComponent<FirstPersonController>(), this, frontObjects, interactiveRaycastObjects });
-                }
-                else {
-                    if(hit.collider.GetComponent<Interactable>() != null) {
-                        hit.collider.GetComponent<Interactable>().Interact(gameObject);
-                    }
+            RaycastHit hit = interactiveRaycastObjects.hits;
+            if (hit.collider.CompareTag("Door")) {
+                hit.collider.GetComponent<OpenDoorEvent>().Run();
+            }
+            else if (hit.collider.CompareTag("ButtonsPanel")) {
+                hit.collider.GetComponent<FixViewToElevatorButtons>().Init(GetComponentInChildren<Camera>(), 
+                    new MonoBehaviour[] { GetComponent<FirstPersonController>(), this, frontObjects, interactiveRaycastObjects });
+            }
+            else {
+                if(hit.collider.GetComponent<Interactable>() != null) {
+                    hit.collider.GetComponent<Interactable>().Interact(gameObject);
                 }
             }
+            
         }
     }
 }

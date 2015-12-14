@@ -33,12 +33,14 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
             foreach (MonoBehaviour comp in componentsToToggle) {
                 comp.enabled = true;
             }
+            this.GetComponent<Collider>().enabled = true;
             transformAnimator.Reset();
             Cursor.visible = false;
         }
 	}
 
     public void Init(Camera cam, MonoBehaviour[] componentsToToggle) {
+        this.GetComponent<Collider>().enabled = false;
         this.componentsToToggle = componentsToToggle;
         foreach(MonoBehaviour comp in componentsToToggle) {
             comp.enabled = false;
