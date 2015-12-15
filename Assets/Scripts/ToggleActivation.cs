@@ -28,12 +28,11 @@ public class ToggleActivation : MonoBehaviour {
             section.SetActive(false);
         }
         
-
         foreach (GameObject section in activateCollidersInGameObjects) {
-            ActivateColliders(section.GetComponents<Collider>(), 1);
+            ActivateColliders(section.GetComponentsInChildren<Collider>(), 1);
         }
         foreach (GameObject section in deactivateCollidersInGameObjects) {
-            DeactivateColliders(section.GetComponents<Collider>(), 1);
+            DeactivateColliders(section.GetComponentsInChildren<Collider>(), 1);
         }
         
     }

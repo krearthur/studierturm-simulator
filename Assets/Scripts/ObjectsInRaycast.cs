@@ -39,9 +39,11 @@ public class ObjectsInRaycast : MonoBehaviour {
 	}
     
     void OnDisable() {
-        uiCursor.enabled = false;
+        if(uiCursor != null)
+            uiCursor.enabled = false;
     }
     void OnEnable() {
-        uiCursor.enabled = true;
+        if (uiCursor != null)
+            uiCursor.enabled = true;
     }
 }
