@@ -8,31 +8,17 @@ public class ToggleActivation : MonoBehaviour {
 
     public GameObject[] activateCollidersInGameObjects;
     public GameObject[] deactivateCollidersInGameObjects;
-
-    public ToggleActivation invertFromToggle;
-    public ToggleActivation copyFromToggle;
+    public int depth = 2;
 
     public string playerTag = "Player";
     public bool triggerOnStart = false;
 
-	// Use this for initialization
+	
 	void Start () {
-	    if(invertFromToggle != null) {
-            activateObjects = invertFromToggle.deactivateObjects;
-            deactivateObjects = invertFromToggle.activateObjects;
-            activateCollidersInGameObjects = invertFromToggle.deactivateCollidersInGameObjects;
-            deactivateCollidersInGameObjects = invertFromToggle.activateCollidersInGameObjects;
-        }
-        if(copyFromToggle != null) {
-            activateObjects = invertFromToggle.activateObjects;
-            deactivateObjects = invertFromToggle.deactivateObjects;
-            activateCollidersInGameObjects = invertFromToggle.activateCollidersInGameObjects;
-            deactivateCollidersInGameObjects = invertFromToggle.deactivateCollidersInGameObjects;
-        }
         if (triggerOnStart) {
             Toggle();
         }
-	}
+    }
 
     private void Toggle() {
         foreach (GameObject section in activateObjects) {
@@ -44,12 +30,11 @@ public class ToggleActivation : MonoBehaviour {
         
 
         foreach (GameObject section in activateCollidersInGameObjects) {
-            ActivateColliders(section.GetComponents<Collider>());
+            ActivateColliders(section.GetComponents<Collider>(), 1);
         }
         foreach (GameObject section in deactivateCollidersInGameObjects) {
-            DeactivateColliders(section.GetComponents<Collider>());
+            DeactivateColliders(section.GetComponents<Collider>(), 1);
         }
-        
         
     }
 	
@@ -59,17 +44,19 @@ public class ToggleActivation : MonoBehaviour {
         }
     }
 
-    private void DeactivateColliders(Collider[] colliders) {
+    private void DeactivateColliders(Collider[] colliders, int level) {
+        if (level > depth) return;
         foreach (Collider collider in colliders) {
             collider.enabled = false;
-            DeactivateColliders(collider.GetComponentsInChildren<Collider>(false));
+            DeactivateColliders(collider.GetComponentsInChildren<Collider>(true), ++level);
         }
     }
 
-    private void ActivateColliders(Collider[] colliders) {
+    private void ActivateColliders(Collider[] colliders, int level) {
+        if (level > depth) return;
         foreach (Collider collider in colliders) {
-            collider.enabled = false;
-            ActivateColliders(collider.GetComponentsInChildren<Collider>(true));
+            collider.enabled = true;
+            ActivateColliders(collider.GetComponentsInChildren<Collider>(true), ++level);
         }
     }
 }
