@@ -22,6 +22,20 @@ ModelImporter:
     100028: Treppenstangen_007
     100030: Treppenstangen_008
     100032: Treppenstangen_009
+    100034: ceiling_000
+    100036: ceiling_001
+    100038: ceiling_002
+    100040: ceiling_003
+    100042: ceiling_004
+    100044: ceiling_005
+    100046: ceiling_006
+    100048: floor_000
+    100050: floor_001
+    100052: floor_002
+    100054: floor_004
+    100056: floor_005
+    100058: floor_006
+    100060: treppenboden_002
     400000: //RootNode
     400002: treppenboden_000
     400004: treppenboden_001
@@ -39,6 +53,20 @@ ModelImporter:
     400028: Treppenstangen_007
     400030: Treppenstangen_008
     400032: Treppenstangen_009
+    400034: ceiling_000
+    400036: ceiling_001
+    400038: ceiling_002
+    400040: ceiling_003
+    400042: ceiling_004
+    400044: ceiling_005
+    400046: ceiling_006
+    400048: floor_000
+    400050: floor_001
+    400052: floor_002
+    400054: floor_004
+    400056: floor_005
+    400058: floor_006
+    400060: treppenboden_002
     2300000: treppenboden_000
     2300002: treppenboden_001
     2300004: Treppengel_nder_000
@@ -55,6 +83,20 @@ ModelImporter:
     2300026: Treppenstangen_007
     2300028: Treppenstangen_008
     2300030: Treppenstangen_009
+    2300032: ceiling_000
+    2300034: ceiling_001
+    2300036: ceiling_002
+    2300038: ceiling_003
+    2300040: ceiling_004
+    2300042: ceiling_005
+    2300044: ceiling_006
+    2300046: floor_000
+    2300048: floor_001
+    2300050: floor_002
+    2300052: floor_004
+    2300054: floor_005
+    2300056: floor_006
+    2300058: treppenboden_002
     3300000: treppenboden_000
     3300002: treppenboden_001
     3300004: Treppengel_nder_000
@@ -71,6 +113,20 @@ ModelImporter:
     3300026: Treppenstangen_007
     3300028: Treppenstangen_008
     3300030: Treppenstangen_009
+    3300032: ceiling_000
+    3300034: ceiling_001
+    3300036: ceiling_002
+    3300038: ceiling_003
+    3300040: ceiling_004
+    3300042: ceiling_005
+    3300044: ceiling_006
+    3300046: floor_000
+    3300048: floor_001
+    3300050: floor_002
+    3300052: floor_004
+    3300054: floor_005
+    3300056: floor_006
+    3300058: treppenboden_002
     4300000: treppenboden_001
     4300002: Treppenstangen_003
     4300004: Treppenstangen_002
@@ -87,6 +143,20 @@ ModelImporter:
     4300026: Treppengel_nder_001
     4300028: Treppenstangen_005
     4300030: Treppenstangen_004
+    4300032: ceiling_000
+    4300034: ceiling_001
+    4300036: ceiling_002
+    4300038: ceiling_003
+    4300040: ceiling_004
+    4300042: ceiling_005
+    4300044: ceiling_006
+    4300046: floor_000
+    4300048: floor_001
+    4300050: floor_002
+    4300052: floor_004
+    4300054: floor_005
+    4300056: floor_006
+    4300058: treppenboden_002
     6400000: treppenboden_000
     6400002: treppenboden_001
     6400004: Treppengel_nder_000
@@ -103,6 +173,20 @@ ModelImporter:
     6400026: Treppenstangen_007
     6400028: Treppenstangen_008
     6400030: Treppenstangen_009
+    6400032: ceiling_000
+    6400034: ceiling_001
+    6400036: ceiling_002
+    6400038: ceiling_003
+    6400040: ceiling_004
+    6400042: ceiling_005
+    6400044: ceiling_006
+    6400046: floor_000
+    6400048: floor_001
+    6400050: floor_002
+    6400052: floor_004
+    6400054: floor_005
+    6400056: floor_006
+    6400058: treppenboden_002
     7400000: Default Take
     9500000: //RootNode
   materials:

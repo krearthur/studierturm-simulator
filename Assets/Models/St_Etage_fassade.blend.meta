@@ -88,6 +88,21 @@ ModelImporter:
     100160: Walls_074
     100162: Walls_075
     100164: Wandhalterung
+    100166: Colorwall_left
+    100168: Colorwall_right
+    100170: fenster_treppenhaus_left
+    100172: fenster_treppenhaus_left_001
+    100174: fenster_treppenhaus_right
+    100176: fenster_treppenhaus_right_001
+    100178: Walls
+    100180: wandplatte
+    100182: wandplatte_001
+    100184: Fassade
+    100186: InnerWalls
+    100188: Treppenhaus_walls_left
+    100190: Treppenhaus_walls_right
+    100192: wandplatte_left
+    100194: wandplatte_right
     400000: Fenster
     400002: Fenster_001
     400004: Fenster_002
@@ -171,6 +186,21 @@ ModelImporter:
     400160: Walls_074
     400162: Walls_075
     400164: Wandhalterung
+    400166: Colorwall_left
+    400168: Colorwall_right
+    400170: fenster_treppenhaus_left
+    400172: fenster_treppenhaus_left_001
+    400174: fenster_treppenhaus_right
+    400176: fenster_treppenhaus_right_001
+    400178: Walls
+    400180: wandplatte
+    400182: wandplatte_001
+    400184: Fassade
+    400186: InnerWalls
+    400188: Treppenhaus_walls_left
+    400190: Treppenhaus_walls_right
+    400192: wandplatte_left
+    400194: wandplatte_right
     2300000: Fenster
     2300002: Fenster_001
     2300004: Fenster_002
@@ -253,6 +283,21 @@ ModelImporter:
     2300158: Walls_074
     2300160: Walls_075
     2300162: Wandhalterung
+    2300164: Colorwall_left
+    2300166: Colorwall_right
+    2300168: fenster_treppenhaus_left
+    2300170: fenster_treppenhaus_left_001
+    2300172: fenster_treppenhaus_right
+    2300174: fenster_treppenhaus_right_001
+    2300176: Walls
+    2300178: wandplatte
+    2300180: wandplatte_001
+    2300182: Fassade
+    2300184: InnerWalls
+    2300186: Treppenhaus_walls_left
+    2300188: Treppenhaus_walls_right
+    2300190: wandplatte_left
+    2300192: wandplatte_right
     3300000: Fenster
     3300002: Fenster_001
     3300004: Fenster_002
@@ -335,6 +380,21 @@ ModelImporter:
     3300158: Walls_074
     3300160: Walls_075
     3300162: Wandhalterung
+    3300164: Colorwall_left
+    3300166: Colorwall_right
+    3300168: fenster_treppenhaus_left
+    3300170: fenster_treppenhaus_left_001
+    3300172: fenster_treppenhaus_right
+    3300174: fenster_treppenhaus_right_001
+    3300176: Walls
+    3300178: wandplatte
+    3300180: wandplatte_001
+    3300182: Fassade
+    3300184: InnerWalls
+    3300186: Treppenhaus_walls_left
+    3300188: Treppenhaus_walls_right
+    3300190: wandplatte_left
+    3300192: wandplatte_right
     4300000: Fenster_016
     4300002: Fenster_015
     4300004: SafetyStange_014
@@ -417,6 +477,21 @@ ModelImporter:
     4300158: Walls_002
     4300160: Walls_000
     4300162: Walls_017
+    4300164: Colorwall_left
+    4300166: Colorwall_right
+    4300168: fenster_treppenhaus_left_001
+    4300170: fenster_treppenhaus_left
+    4300172: fenster_treppenhaus_right_001
+    4300174: fenster_treppenhaus_right
+    4300176: Walls
+    4300178: wandplatte
+    4300180: wandplatte_001
+    4300182: Fassade
+    4300184: InnerWalls
+    4300186: Treppenhaus_walls_left
+    4300188: Treppenhaus_walls_right
+    4300190: wandplatte_left
+    4300192: wandplatte_right
     6400000: Fenster
     6400002: Fenster_001
     6400004: Fenster_002
@@ -499,6 +574,21 @@ ModelImporter:
     6400158: Walls_074
     6400160: Walls_075
     6400162: Wandhalterung
+    6400164: Colorwall_left
+    6400166: Colorwall_right
+    6400168: fenster_treppenhaus_left
+    6400170: fenster_treppenhaus_left_001
+    6400172: fenster_treppenhaus_right
+    6400174: fenster_treppenhaus_right_001
+    6400176: Walls
+    6400178: wandplatte
+    6400180: wandplatte_001
+    6400182: Fassade
+    6400184: InnerWalls
+    6400186: Treppenhaus_walls_left
+    6400188: Treppenhaus_walls_right
+    6400190: wandplatte_left
+    6400192: wandplatte_right
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -544,7 +634,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
