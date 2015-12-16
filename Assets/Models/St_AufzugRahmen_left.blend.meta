@@ -14,6 +14,9 @@ ModelImporter:
     100012: elv_door_2
     100014: Floor_doors_left
     100016: //RootNode
+    100018: Collider_Rahmen
+    100020: Collider_Rahmen_001
+    100022: Collider_Rahmen_002
     400000: Aufzug_button_au_en_left
     400002: Aufzug_button_au_en_status_left
     400004: Aufzug_flur_armature_left
@@ -23,23 +26,38 @@ ModelImporter:
     400012: elv_door_2
     400014: Floor_doors_left
     400016: //RootNode
+    400018: Collider_Rahmen
+    400020: Collider_Rahmen_001
+    400022: Collider_Rahmen_002
     2300000: Aufzug_button_au_en_left
     2300002: Aufzug_button_au_en_status_left
     2300004: Aufzug_rahmen_left
     2300006: Aufzug_terminal_left
+    2300008: Collider_Rahmen
+    2300010: Collider_Rahmen_001
+    2300012: Collider_Rahmen_002
     3300000: Aufzug_button_au_en_left
     3300002: Aufzug_button_au_en_status_left
     3300004: Aufzug_rahmen_left
     3300006: Aufzug_terminal_left
+    3300008: Collider_Rahmen
+    3300010: Collider_Rahmen_001
+    3300012: Collider_Rahmen_002
     4300000: Aufzug_rahmen_left
     4300002: Aufzug_terminal_left
     4300004: Aufzug_button_au_en_left
     4300006: Aufzug_button_au_en_status_left
     4300008: Floor_doors_left
+    4300010: Collider_Rahmen_002
+    4300012: Collider_Rahmen_001
+    4300014: Collider_Rahmen
     6400000: Aufzug_button_au_en_left
     6400002: Aufzug_button_au_en_status_left
     6400004: Aufzug_rahmen_left
     6400006: Aufzug_terminal_left
+    6400008: Collider_Rahmen
+    6400010: Collider_Rahmen_001
+    6400012: Collider_Rahmen_002
     7400000: Default Take
     7400002: floor_door_close
     7400004: floor_door_open
@@ -158,7 +176,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

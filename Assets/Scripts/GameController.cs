@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		Application.targetFrameRate = 60;
         Cursor.visible = false;
-        cursorCanvas.SetActive(true);
+        //cursorCanvas.SetActive(true);
 	}
 	
 	// Update is called once per frame
