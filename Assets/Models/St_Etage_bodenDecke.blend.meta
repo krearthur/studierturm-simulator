@@ -21,6 +21,9 @@ ModelImporter:
     100026: floor_006
     100028: //RootNode
     100030: Zimmerboden
+    100032: ceiling_007
+    100034: ceiling_008
+    100036: floor_003
     400000: badezimmer_boden
     400002: ceiling_000
     400004: ceiling_001
@@ -37,6 +40,9 @@ ModelImporter:
     400026: floor_006
     400028: //RootNode
     400030: Zimmerboden
+    400032: ceiling_007
+    400034: ceiling_008
+    400036: floor_003
     2300000: badezimmer_boden
     2300002: ceiling_000
     2300004: ceiling_001
@@ -52,6 +58,9 @@ ModelImporter:
     2300024: floor_005
     2300026: floor_006
     2300028: Zimmerboden
+    2300030: ceiling_007
+    2300032: ceiling_008
+    2300034: floor_003
     3300000: badezimmer_boden
     3300002: ceiling_000
     3300004: ceiling_001
@@ -67,6 +76,9 @@ ModelImporter:
     3300024: floor_005
     3300026: floor_006
     3300028: Zimmerboden
+    3300030: ceiling_007
+    3300032: ceiling_008
+    3300034: floor_003
     4300000: badezimmer_boden
     4300002: Zimmerboden
     4300004: floor_006
@@ -82,6 +94,9 @@ ModelImporter:
     4300024: ceiling_000
     4300026: ceiling_003
     4300028: floor_004
+    4300030: ceiling_008
+    4300032: ceiling_007
+    4300034: floor_003
     6400000: badezimmer_boden
     6400002: ceiling_000
     6400004: ceiling_001
