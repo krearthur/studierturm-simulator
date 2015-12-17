@@ -30,6 +30,7 @@ ModelImporter:
     100044: raucheimer_right_001
     100046: Schornstein
     100048: //RootNode
+    100050: schonstein
     400000: Antenne
     400002: Antenne_001
     400004: Antenne_002
@@ -55,6 +56,7 @@ ModelImporter:
     400044: raucheimer_right_001
     400046: Schornstein
     400048: //RootNode
+    400050: schonstein
     2300000: Antenne
     2300002: Antenne_001
     2300004: Antenne_002
@@ -79,6 +81,7 @@ ModelImporter:
     2300042: raucheimer_right
     2300044: raucheimer_right_001
     2300046: Schornstein
+    2300048: schonstein
     3300000: Antenne
     3300002: Antenne_001
     3300004: Antenne_002
@@ -103,6 +106,7 @@ ModelImporter:
     3300042: raucheimer_right
     3300044: raucheimer_right_001
     3300046: Schornstein
+    3300048: schonstein
     4300000: Schornstein
     4300002: Antenne_004
     4300004: Antenne_003
@@ -127,6 +131,7 @@ ModelImporter:
     4300042: dach-trashbin_right
     4300044: dachbank_001
     4300046: dachbank
+    4300048: schonstein
     6400000: Antenne
     6400002: Antenne_001
     6400004: Antenne_002
@@ -151,6 +156,7 @@ ModelImporter:
     6400042: raucheimer_right
     6400044: raucheimer_right_001
     6400046: Schornstein
+    6400048: schonstein
     7400000: Default Take
     9500000: //RootNode
   materials:
