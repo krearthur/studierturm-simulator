@@ -116,6 +116,7 @@ ModelImporter:
     100216: Heizung_014
     100218: Heizung_015
     100220: Heizung_016
+    100222: Lights
     400000: Doorbell
     400002: Doorbell_001
     400004: Doorbell_002
@@ -227,6 +228,7 @@ ModelImporter:
     400216: Heizung_014
     400218: Heizung_015
     400220: Heizung_016
+    400222: Lights
     2300000: Doorbell
     2300002: Doorbell_001
     2300004: Doorbell_002
