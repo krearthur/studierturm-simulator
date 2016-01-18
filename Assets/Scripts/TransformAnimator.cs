@@ -2,6 +2,10 @@
 using System.Collections;
 using System;
 
+/// <summary>
+/// Capable of animating / interpolating Position, Rotation and Scale.
+/// Intended to be used for Transform components.
+/// </summary>
 public class TransformAnimator {
 
     private Vector3 sourcePosition;
