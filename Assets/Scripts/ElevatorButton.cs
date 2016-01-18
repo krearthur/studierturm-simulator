@@ -12,7 +12,8 @@ public class ElevatorButton : MonoBehaviour, ElevatorListener {
     public float blinkInterval = .3f;
     public bool blinking;
     private float currentBlinkTime;
-    private bool btnIsOn = false;
+    public bool btnIsOn = false;
+    private FixViewToElevatorButtons fixView;
     
     public AudioSource audioSource;
 
@@ -21,6 +22,7 @@ public class ElevatorButton : MonoBehaviour, ElevatorListener {
         elevator.AddListener(this);
         buttonsInactiveTex = GetComponent<Renderer>().material.mainTexture;
         buttonsInActiveColor = GetComponent<Renderer>().material.GetColor("_EmissionColor");
+        fixView = GetComponentInParent<FixViewToElevatorButtons>();
     }
 
     // Update is called once per frame
@@ -41,14 +43,14 @@ public class ElevatorButton : MonoBehaviour, ElevatorListener {
             if (elevator.currentFloor == floor && elevator.IsClosed() == false) {
                 BtnLight(false);
             }
-            
+            fixView.externCancelFixView(this);
             elevator.CallToFloor(floor);
         }
         else {
-            if (elevator.IsStanding() && !elevator.IsOpening() && !elevator.IsOpen() ) {
+            if (elevator.OpenDoorsCall()) {
                 BtnLight(true);
             }
-            elevator.OpenDoorsCall();
+            fixView.externCancelFixView(this);
         }
 
     }

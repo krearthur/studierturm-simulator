@@ -18,7 +18,8 @@ public class InteractionController : MonoBehaviour {
             RaycastHit hit = interactiveRaycastObjects.hits;
             if (hit.collider.CompareTag("ButtonsPanel")) {
                 hit.collider.GetComponent<FixViewToElevatorButtons>().Init(GetComponentInChildren<Camera>(), 
-                    new MonoBehaviour[] { GetComponent<FirstPersonController>(), this, frontObjects, interactiveRaycastObjects });
+                    new MonoBehaviour[] { GetComponent<FirstPersonController>(), this, frontObjects, interactiveRaycastObjects },
+                    new Collider[] { frontObjects.GetComponent<Collider>() });
             }
             else {
                 if(hit.collider.GetComponent<Interactable>() != null) {

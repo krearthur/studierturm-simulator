@@ -148,12 +148,18 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         return currentFloor;
     }
 
-    public void OpenDoorsCall() {
+    /// <summary>
+    /// Requests to open the doors. 
+    /// </summary>
+    /// <returns>True if request gets redirected. False if request gets ignored due to current elevator status.</returns>
+    public bool OpenDoorsCall() {
         if (IsStanding()) {
             if (IsClosed() || IsClosing()) {
                 animator.SetTrigger("OpenTrigger");
+                return true;
             }
         }
+        return false;
     }
     
     public bool IsStanding() {
@@ -188,6 +194,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     }
 
     void SlidingDoorListener.DoorOpening() {
+        doorColliders.isTrigger = true;
         foreach (ElevatorListener listener in listeners) {
             listener.ElevatorOpening();
         }
@@ -207,7 +214,6 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     }
 
     void SlidingDoorListener.DoorOpened() {
-        doorColliders.isTrigger = true;
         foreach (ElevatorListener listener in listeners) {
             listener.ElevatorOpened();
         }

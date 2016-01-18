@@ -90,7 +90,7 @@ public class TransformAnimator {
         }
     }
 
-    public void InvertedStart() {
+    public void StartBackwards() {
         if (!running) {
             currentFinishWaitTime = waitAfterFinishDuration;
             currentAnimationTime = animationDuration;

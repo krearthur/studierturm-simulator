@@ -69,13 +69,13 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     }
 
     void SlidingDoorListener.DoorOpening() {
-
+        doorColliders.isTrigger = true;
         waitingForElevator = false;
         audio.PlayOneShot(openingSound);
     }
 
     void SlidingDoorListener.DoorOpened() {
-        doorColliders.isTrigger = true;
+        
 
     }
 
