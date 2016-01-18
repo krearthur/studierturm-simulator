@@ -16,10 +16,7 @@ public class InteractionController : MonoBehaviour {
     void Update() {
         if (interactiveRaycastObjects.hasObjects && Input.GetButtonDown("Action")) {
             RaycastHit hit = interactiveRaycastObjects.hits;
-            if (hit.collider.CompareTag("Door")) {
-                hit.collider.GetComponent<OpenDoorEvent>().Run();
-            }
-            else if (hit.collider.CompareTag("ButtonsPanel")) {
+            if (hit.collider.CompareTag("ButtonsPanel")) {
                 hit.collider.GetComponent<FixViewToElevatorButtons>().Init(GetComponentInChildren<Camera>(), 
                     new MonoBehaviour[] { GetComponent<FirstPersonController>(), this, frontObjects, interactiveRaycastObjects });
             }
@@ -28,7 +25,6 @@ public class InteractionController : MonoBehaviour {
                     hit.collider.GetComponent<Interactable>().Interact(gameObject);
                 }
             }
-            
         }
     }
 }

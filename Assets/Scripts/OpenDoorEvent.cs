@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 /// <summary>
 /// Gets attached to an door object and handles the open event.
 /// </summary>
 [RequireComponent(typeof(AudioSource))]
-public class OpenDoorEvent : MonoBehaviour {
+public class OpenDoorEvent : MonoBehaviour, Interactable {
 
     private AudioSource audioSource;
     public AudioClip openSound;
@@ -32,7 +33,7 @@ public class OpenDoorEvent : MonoBehaviour {
         calculatedOpenAngle = Mathf.Repeat(newRotation.z + openAngle, 360);
     }
 
-    public void Run() {
+    private void Run() {
         if (!running) {
             
 			if(!isOpen){
@@ -86,4 +87,8 @@ public class OpenDoorEvent : MonoBehaviour {
         }
 
 	}
+
+    public void Interact(GameObject source) {
+        Run();
+    }
 }
