@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: b9403c7afd9f8644698c3bb6b37d1cab
+timeCreated: 1450314397
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: boden_dachhaus_left
+    100002: boden_dachhaus_left_001
+    100004: boden_dachhaus_right
+    100006: boden_dachhaus_right_001
+    100008: ceiling_dachterasse
+    100010: ceiling_dachterasse_001
+    100012: ceiling_dachterasse_002
+    100014: ceiling_dachterasse_003
+    100016: ceiling_dachterasse_004
+    100018: dachrand
+    100020: //RootNode
+    100022: steingrund
+    400000: boden_dachhaus_left
+    400002: boden_dachhaus_left_001
+    400004: boden_dachhaus_right
+    400006: boden_dachhaus_right_001
+    400008: ceiling_dachterasse
+    400010: ceiling_dachterasse_001
+    400012: ceiling_dachterasse_002
+    400014: ceiling_dachterasse_003
+    400016: ceiling_dachterasse_004
+    400018: dachrand
+    400020: //RootNode
+    400022: steingrund
+    2300000: boden_dachhaus_left
+    2300002: boden_dachhaus_left_001
+    2300004: boden_dachhaus_right
+    2300006: boden_dachhaus_right_001
+    2300008: ceiling_dachterasse
+    2300010: ceiling_dachterasse_001
+    2300012: ceiling_dachterasse_002
+    2300014: ceiling_dachterasse_003
+    2300016: ceiling_dachterasse_004
+    2300018: dachrand
+    2300020: steingrund
+    3300000: boden_dachhaus_left
+    3300002: boden_dachhaus_left_001
+    3300004: boden_dachhaus_right
+    3300006: boden_dachhaus_right_001
+    3300008: ceiling_dachterasse
+    3300010: ceiling_dachterasse_001
+    3300012: ceiling_dachterasse_002
+    3300014: ceiling_dachterasse_003
+    3300016: ceiling_dachterasse_004
+    3300018: dachrand
+    3300020: steingrund
+    4300000: boden_dachhaus_left_001
+    4300002: boden_dachhaus_right_001
+    4300004: ceiling_dachterasse_004
+    4300006: ceiling_dachterasse_003
+    4300008: ceiling_dachterasse_002
+    4300010: ceiling_dachterasse_001
+    4300012: steingrund
+    4300014: boden_dachhaus_right
+    4300016: boden_dachhaus_left
+    4300018: dachrand
+    4300020: ceiling_dachterasse
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
