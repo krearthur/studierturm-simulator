@@ -20,7 +20,7 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
 	
 	// Update is called once per frame
 	void Update () {
-        if (transformAnimator.Tick(Time.deltaTime)) {
+        if (transformAnimator.Step(Time.deltaTime)) {
 			sourceCamera.transform.position = transformAnimator.position;
 			sourceCamera.transform.rotation = transformAnimator.rotation;
         }else if (transformAnimator.reachedTarget) {

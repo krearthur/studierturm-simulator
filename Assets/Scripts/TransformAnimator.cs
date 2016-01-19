@@ -107,6 +107,7 @@ public class TransformAnimator {
     /// </summary>
     public void Reset() {
         running = false;
+        reachedTarget = false;
         movingBackToSource = false;
         movingTowardsTarget = false;
         currentAnimationTime = 0f;
@@ -117,11 +118,11 @@ public class TransformAnimator {
     }
 
     /// <summary>
-    /// Updates the animated values with deltaTime and returns the running state after update.
+    /// Updates the animated values with deltaTime and returns true if still running after the step.
     /// </summary>
     /// <param name="deltaTime"></param>
     /// <returns>True if animation is still running after the update.</returns>
-    public bool Tick(float deltaTime) {
+    public bool Step(float deltaTime) {
         if (running) {
             // update animation progress
             Vector3 distanceToTarget = targetPosition - sourcePosition;
