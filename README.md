@@ -2,6 +2,8 @@
 studierturm simulator trier, unity
 
 ## TODO:
+- treppenhausfenster umbauen
+- farbwände wie original erweitern (und versch. farben pro etage)
 - create other 7 floors from floor 8 and configure them
 - configure activator/deactivators for the floors
 - configure elevator for all floors

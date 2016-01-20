@@ -61,7 +61,7 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
         if (placeHolder == null) {
             placeHolder = new GameObject("cameraPlaceHolder");
         }
-        placeHolder.transform.parent = sourceCamera.transform.parent;
+        placeHolder.transform.parent = targetCameraTransform.parent;
         placeHolder.transform.position = sourceCamera.transform.position;
         placeHolder.transform.rotation = sourceCamera.transform.rotation;
 
