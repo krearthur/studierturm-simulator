@@ -24,6 +24,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     private Animator animator;
     private TransformAnimator positionDriver;
     public float drivingTimeForOneFloor = 1.5f;
+    public ObjectsInTrigger carriedObjects;
 
     public Collider doorColliders;
 
@@ -53,6 +54,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         positionDriver = new TransformAnimator();
         targetFloors = 0;
         transform.position = GetFloorPosition(currentFloor);
+        
     }
 
     // Update is called once per frame
@@ -81,7 +83,13 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         if (positionDriver.running) {
             Debug.Log("driving towards floor: " + GetFloorNumber(currentTargetFloor));
             positionDriver.Step(Time.deltaTime);
-            transform.position = positionDriver.position;
+            // Also move carried objects
+            Vector3 delta = positionDriver.position - transform.position;
+            foreach (GameObject go in carriedObjects.objects) {
+                go.transform.position += delta;
+            }
+            transform.position += delta;
+            
         }
         else {
             if (positionDriver.reachedTarget) {

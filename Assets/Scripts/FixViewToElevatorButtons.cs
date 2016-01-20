@@ -12,6 +12,7 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
     private ElevatorButton[] buttons;
 
     private TransformAnimator transformAnimator = new TransformAnimator();
+    private GameObject placeHolder;
     
 	// Use this for initialization
 	void Start () {
@@ -56,7 +57,15 @@ public class FixViewToElevatorButtons : MonoBehaviour, Interactable {
         }
 
         this.sourceCamera = cam;
-        transformAnimator.Init(sourceCamera.transform, targetCameraTransform, .25f);
+        // create placeholder transform to keep in sync with elevator movement
+        if (placeHolder == null) {
+            placeHolder = new GameObject("cameraPlaceHolder");
+        }
+        placeHolder.transform.parent = sourceCamera.transform.parent;
+        placeHolder.transform.position = sourceCamera.transform.position;
+        placeHolder.transform.rotation = sourceCamera.transform.rotation;
+
+        transformAnimator.Init(placeHolder.transform, targetCameraTransform, .25f, true);
     }
 
     public void Interact(GameObject source) {

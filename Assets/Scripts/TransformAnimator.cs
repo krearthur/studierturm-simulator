@@ -23,6 +23,9 @@ public class TransformAnimator {
     private Vector3 currentScale;
     public Vector3 scale { get { return currentScale; } }
 
+    private Transform sourceTransform;
+    private Transform targetTransform;
+
     public bool invertAfterFinish = false;
     public bool restartAfterFinish = false;
     public bool movingTowardsTarget = false;
@@ -33,6 +36,7 @@ public class TransformAnimator {
     public bool animatePosition = true;
     public bool animateRotation = true;
     public bool animateScale = false;
+    private bool keepCheckingTransforms = false;
 
     public float waitAfterFinishDuration = 0f;
     private float currentFinishWaitTime;
@@ -40,15 +44,15 @@ public class TransformAnimator {
     public float animationDuration = 0.5f;
     private float currentAnimationTime = 0f;
 
-    public TransformAnimator(Transform source, Transform target, float duration) {
-        Init(source, target, duration);
+    public TransformAnimator(Transform source, Transform target, float duration, bool keepCheckingTransforms) {
+        Init(source, target, duration, keepCheckingTransforms);
+
     }
 
     public TransformAnimator(Vector3 sourcePosition, Vector3 targetPosition, float duration) {
         Init(sourcePosition, targetPosition, duration);
     }
-
-
+    
     public TransformAnimator() {}
 
     public void Init(Vector3 sourcePosition, Vector3 targetPosition, float duration) {
@@ -57,9 +61,13 @@ public class TransformAnimator {
         animateScale = false;
     }
 
-    public void Init(Transform source, Transform target, float duration) {
+    public void Init(Transform source, Transform target, float duration, bool keepCheckingTransforms) {
         Init(source.position, target.position, source.rotation, target.rotation, source.localScale, target.localScale, duration);
         animateScale = true;
+        if (this.keepCheckingTransforms = keepCheckingTransforms) {
+            sourceTransform = source;
+            targetTransform = target;
+        }
     }
 
     public void Init(Vector3 sourcePosition, Vector3 targetPosition, 
@@ -124,6 +132,16 @@ public class TransformAnimator {
     /// <returns>True if animation is still running after the update.</returns>
     public bool Step(float deltaTime) {
         if (running) {
+            // get new source and target values 
+            if (keepCheckingTransforms) {
+                this.sourcePosition = sourceTransform.position;
+                this.targetPosition = targetTransform.position;
+                this.sourceRotation = sourceTransform.rotation;
+                this.targetRotation = targetTransform.rotation;
+                this.sourceScale = sourceTransform.localScale;
+                this.targetScale = targetTransform.localScale;
+            }
+
             // update animation progress
             Vector3 distanceToTarget = targetPosition - sourcePosition;
             Vector3 totalScaleDiff = targetScale - sourceScale;
