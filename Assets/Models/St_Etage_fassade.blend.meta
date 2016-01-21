@@ -240,6 +240,13 @@ ModelImporter:
     100464: Collider_InnerWalls_075
     100466: Collider_InnerWalls_076
     100468: Collider_InnerWalls_077
+    100470: Fassade_019
+    100472: InnerWalls_022
+    100474: InnerWalls_023
+    100476: InnerWalls_024
+    100478: InnerWalls_025
+    100480: Treppenhaus_walls_left_001
+    100482: Treppenhaus_walls_right_001
     400000: Fenster
     400002: Fenster_001
     400004: Fenster_002
@@ -475,6 +482,13 @@ ModelImporter:
     400464: Collider_InnerWalls_075
     400466: Collider_InnerWalls_076
     400468: Collider_InnerWalls_077
+    400470: Fassade_019
+    400472: InnerWalls_022
+    400474: InnerWalls_023
+    400476: InnerWalls_024
+    400478: InnerWalls_025
+    400480: Treppenhaus_walls_left_001
+    400482: Treppenhaus_walls_right_001
     2300000: Fenster
     2300002: Fenster_001
     2300004: Fenster_002
@@ -709,6 +723,13 @@ ModelImporter:
     2300462: Collider_InnerWalls_075
     2300464: Collider_InnerWalls_076
     2300466: Collider_InnerWalls_077
+    2300468: Fassade_019
+    2300470: InnerWalls_022
+    2300472: InnerWalls_023
+    2300474: InnerWalls_024
+    2300476: InnerWalls_025
+    2300478: Treppenhaus_walls_left_001
+    2300480: Treppenhaus_walls_right_001
     3300000: Fenster
     3300002: Fenster_001
     3300004: Fenster_002
@@ -943,6 +964,13 @@ ModelImporter:
     3300462: Collider_InnerWalls_075
     3300464: Collider_InnerWalls_076
     3300466: Collider_InnerWalls_077
+    3300468: Fassade_019
+    3300470: InnerWalls_022
+    3300472: InnerWalls_023
+    3300474: InnerWalls_024
+    3300476: InnerWalls_025
+    3300478: Treppenhaus_walls_left_001
+    3300480: Treppenhaus_walls_right_001
     4300000: Fenster_016
     4300002: Fenster_015
     4300004: SafetyStange_014
@@ -1177,6 +1205,13 @@ ModelImporter:
     4300462: Collider_Fassade_002
     4300464: Collider_Fassade_001
     4300466: Collider_Fassade
+    4300468: InnerWalls_025
+    4300470: InnerWalls_024
+    4300472: Treppenhaus_walls_right_001
+    4300474: InnerWalls_023
+    4300476: Fassade_019
+    4300478: InnerWalls_022
+    4300480: Treppenhaus_walls_left_001
     6400000: Fenster
     6400002: Fenster_001
     6400004: Fenster_002
