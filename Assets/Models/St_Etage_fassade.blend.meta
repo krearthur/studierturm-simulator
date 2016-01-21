@@ -247,6 +247,17 @@ ModelImporter:
     100478: InnerWalls_025
     100480: Treppenhaus_walls_left_001
     100482: Treppenhaus_walls_right_001
+    100484: fenster_treppenhaus_right_000
+    100486: fenster_treppenhaus_right_002
+    100488: fenster_treppenhaus_right_003
+    100490: Cube
+    100492: Cube_001
+    100494: Cube_002
+    100496: Cube_003
+    100498: fensterschutz
+    100500: fensterschutz_001
+    100502: fensterschutz_002
+    100504: fensterschutz_003
     400000: Fenster
     400002: Fenster_001
     400004: Fenster_002
@@ -489,6 +500,17 @@ ModelImporter:
     400478: InnerWalls_025
     400480: Treppenhaus_walls_left_001
     400482: Treppenhaus_walls_right_001
+    400484: fenster_treppenhaus_right_000
+    400486: fenster_treppenhaus_right_002
+    400488: fenster_treppenhaus_right_003
+    400490: Cube
+    400492: Cube_001
+    400494: Cube_002
+    400496: Cube_003
+    400498: fensterschutz
+    400500: fensterschutz_001
+    400502: fensterschutz_002
+    400504: fensterschutz_003
     2300000: Fenster
     2300002: Fenster_001
     2300004: Fenster_002
@@ -730,6 +752,17 @@ ModelImporter:
     2300476: InnerWalls_025
     2300478: Treppenhaus_walls_left_001
     2300480: Treppenhaus_walls_right_001
+    2300482: fenster_treppenhaus_right_000
+    2300484: fenster_treppenhaus_right_002
+    2300486: fenster_treppenhaus_right_003
+    2300488: Cube
+    2300490: Cube_001
+    2300492: Cube_002
+    2300494: Cube_003
+    2300496: fensterschutz
+    2300498: fensterschutz_001
+    2300500: fensterschutz_002
+    2300502: fensterschutz_003
     3300000: Fenster
     3300002: Fenster_001
     3300004: Fenster_002
@@ -971,6 +1004,17 @@ ModelImporter:
     3300476: InnerWalls_025
     3300478: Treppenhaus_walls_left_001
     3300480: Treppenhaus_walls_right_001
+    3300482: fenster_treppenhaus_right_000
+    3300484: fenster_treppenhaus_right_002
+    3300486: fenster_treppenhaus_right_003
+    3300488: Cube
+    3300490: Cube_001
+    3300492: Cube_002
+    3300494: Cube_003
+    3300496: fensterschutz
+    3300498: fensterschutz_001
+    3300500: fensterschutz_002
+    3300502: fensterschutz_003
     4300000: Fenster_016
     4300002: Fenster_015
     4300004: SafetyStange_014
@@ -1212,6 +1256,17 @@ ModelImporter:
     4300476: Fassade_019
     4300478: InnerWalls_022
     4300480: Treppenhaus_walls_left_001
+    4300482: fenster_treppenhaus_right_003
+    4300484: fenster_treppenhaus_right_002
+    4300486: fenster_treppenhaus_right_000
+    4300488: Cube_003
+    4300490: Cube_002
+    4300492: Cube_001
+    4300494: Cube
+    4300496: fensterschutz_003
+    4300498: fensterschutz_001
+    4300500: fensterschutz
+    4300502: fensterschutz_002
     6400000: Fenster
     6400002: Fenster_001
     6400004: Fenster_002

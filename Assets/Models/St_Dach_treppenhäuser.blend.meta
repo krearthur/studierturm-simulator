@@ -47,6 +47,15 @@ ModelImporter:
     100078: treppenhausdach
     100080: treppenhausdach_001
     100082: Colliders
+    100084: fensterschutz
+    100086: fensterschutz_002
+    100088: fenster_treppenhaus_right_000
+    100090: fenster_treppenhaus_right_001
+    100092: fenster_treppenhaus_right_002
+    100094: fenster_treppenhaus_right_003
+    100096: dachhaus_left_001
+    100098: dachhaus_right_001
+    100100: dachhaus_left_002
     400000: Collider_haus_left
     400002: Collider_haus_left_001
     400004: Collider_haus_left_002
@@ -89,6 +98,15 @@ ModelImporter:
     400078: treppenhausdach
     400080: treppenhausdach_001
     400082: Colliders
+    400084: fensterschutz
+    400086: fensterschutz_002
+    400088: fenster_treppenhaus_right_000
+    400090: fenster_treppenhaus_right_001
+    400092: fenster_treppenhaus_right_002
+    400094: fenster_treppenhaus_right_003
+    400096: dachhaus_left_001
+    400098: dachhaus_right_001
+    400100: dachhaus_left_002
     2300000: Collider_haus_left
     2300002: Collider_haus_left_001
     2300004: Collider_haus_left_002
@@ -129,6 +147,15 @@ ModelImporter:
     2300074: fenster_022
     2300076: treppenhausdach
     2300078: treppenhausdach_001
+    2300080: fensterschutz
+    2300082: fensterschutz_002
+    2300084: fenster_treppenhaus_right_000
+    2300086: fenster_treppenhaus_right_001
+    2300088: fenster_treppenhaus_right_002
+    2300090: fenster_treppenhaus_right_003
+    2300092: dachhaus_left_001
+    2300094: dachhaus_right_001
+    2300096: dachhaus_left_002
     3300000: Collider_haus_left
     3300002: Collider_haus_left_001
     3300004: Collider_haus_left_002
@@ -169,6 +196,15 @@ ModelImporter:
     3300074: fenster_022
     3300076: treppenhausdach
     3300078: treppenhausdach_001
+    3300080: fensterschutz
+    3300082: fensterschutz_002
+    3300084: fenster_treppenhaus_right_000
+    3300086: fenster_treppenhaus_right_001
+    3300088: fenster_treppenhaus_right_002
+    3300090: fenster_treppenhaus_right_003
+    3300092: dachhaus_left_001
+    3300094: dachhaus_right_001
+    3300096: dachhaus_left_002
     4300000: Collider_haus_left_027
     4300002: Collider_haus_left_026
     4300004: Collider_haus_left_025
@@ -209,6 +245,15 @@ ModelImporter:
     4300074: fenster_021
     4300076: dachhaus_left
     4300078: Farbwand_dach_left
+    4300080: fensterschutz_002
+    4300082: fensterschutz
+    4300084: fenster_treppenhaus_right_000
+    4300086: fenster_treppenhaus_right_001
+    4300088: fenster_treppenhaus_right_002
+    4300090: fenster_treppenhaus_right_003
+    4300092: dachhaus_left_001
+    4300094: dachhaus_right_001
+    4300096: dachhaus_left_002
     7400000: Default Take
     9500000: //RootNode
   materials:
