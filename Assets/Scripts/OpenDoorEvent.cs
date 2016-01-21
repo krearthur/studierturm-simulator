@@ -16,6 +16,11 @@ public class OpenDoorEvent : MonoBehaviour, Interactable {
     private bool isOpen = false;
     private bool closing = false;
     private bool running = false;
+
+    public bool autoClose = false;
+    public float openWaitTime = 1.5f;
+    private float currentWaitTime = 0;
+
     private Vector3 defaultRotation;
     public Vector3 newRotation;
 
@@ -38,6 +43,7 @@ public class OpenDoorEvent : MonoBehaviour, Interactable {
             
 			if(!isOpen){
                 currentAnimationTime = 0;
+                currentWaitTime = openWaitTime;
                 opening = true;
 				closing = false;
 			}
@@ -58,7 +64,7 @@ public class OpenDoorEvent : MonoBehaviour, Interactable {
             if(currentAnimationTime >= animationDuration) {
                 opening = false;
                 isOpen = true;
-                running = false;
+                running = autoClose;
 				GetComponent<Collider>().isTrigger = false;
                 audioSource.PlayOneShot(openSound);
             }
@@ -69,6 +75,14 @@ public class OpenDoorEvent : MonoBehaviour, Interactable {
                 transform.eulerAngles = newRotation;
             }
             
+        }
+        else if (autoClose && !closing) {
+            if(currentWaitTime <= 0) {
+                closing = true;
+            }
+            else {
+                currentWaitTime -= Time.deltaTime;
+            }
         }
         else if (closing) {
             if (currentAnimationTime <= 0) {
