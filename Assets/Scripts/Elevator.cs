@@ -79,9 +79,12 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     #region ConvenientFunctions 
 
     private void DoDriving() {
-        if (IsClosed() == false) return;
+        if (IsClosed() == false) {
+            Debug.Log(name + " not closed! cancel driving..");
+            return;
+        }
         if (positionDriver.running) {
-            Debug.Log("driving towards floor: " + GetFloorNumber(currentTargetFloor));
+            Debug.Log(name + " driving towards floor: " + GetFloorNumber(currentTargetFloor));
             positionDriver.Step(Time.deltaTime);
             // Also move carried objects
             Vector3 delta = positionDriver.position - transform.position;
@@ -94,12 +97,12 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         else {
             if (positionDriver.reachedTarget) {
                 positionDriver.Reset();
-                Debug.Log("reached target floor: " + GetFloorNumber(currentTargetFloor));
+                Debug.Log(name+" reached target floor: " + GetFloorNumber(currentTargetFloor));
                 currentFloor = currentTargetFloor;
                 driving = false;
             }
             else {
-                Debug.Log("start driving!");
+                Debug.Log(name + " start driving!");
                 positionDriver.Init(transform.position, GetFloorPosition(currentTargetFloor), CalculateDrivingTime());
                 positionDriver.Start();
             }
