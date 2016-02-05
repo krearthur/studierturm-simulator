@@ -2,7 +2,6 @@
 studierturm simulator trier, unity
 
 ## TODO:
-- BUG: wenn man auf dach geht und wieder runter, gehen die boxcollider von aufzug nich auf trigger!!
 - create other 7 floors from floor 8 and configure them(und versch. farben pro etage)
 - configure activator/deactivators for the floors
 - configure elevator for all floors
@@ -13,6 +12,7 @@ studierturm simulator trier, unity
 - add title screen where one can see the whole building with names
 
 ## DONE:
+- BUG: wenn man auf dach geht und wieder runter, gehen die boxcollider von aufzug nich auf trigger!!
 - farbwände wie original erweitern 
 - treppenhausfenster umbauen
 - added elevator frame savety metal
