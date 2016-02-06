@@ -1,10 +1,15 @@
 # studierturm-simulator
 studierturm simulator trier, unity
 
+## Data:
+floor height: 3.103 m
+floors: 8 + roof
+apartments/floor: 15
+
 ## TODO:
-- create other 7 floors from floor 8 and configure them(und versch. farben pro etage)
-- configure activator/deactivators for the floors
-- configure elevator for all floors
+- configure colors for floors
+- configure activator/deactivators for floors
+- configure elevator for floors
 - make blinking behaviour exact the same as original
 - add elevator driving sound effect
 - add details to rooms
@@ -12,6 +17,8 @@ studierturm simulator trier, unity
 - add title screen where one can see the whole building with names
 
 ## DONE:
+- create activator/deactivators for  floors
+- create other 7 floors from floor 8 
 - BUG: wenn man auf dach geht und wieder runter, gehen die boxcollider von aufzug nich auf trigger!!
 - farbwände wie original erweitern 
 - treppenhausfenster umbauen
@@ -31,8 +38,3 @@ studierturm simulator trier, unity
 - feature: doors open / close, with sounds
 - semi-auto toggle objects when going to different floors to improve performance
 
-
-## Data:
-height of one floor: 3.103m
-
-floors: 8 + roof
