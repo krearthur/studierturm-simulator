@@ -7,10 +7,10 @@ floors: 8 + roof
 apartments/floor: 15
 
 ## TODO:
+- create ground floor
 - configure colors for floors
-- configure activator/deactivators for floors
+	- configure activator/deactivators for floors // TODO: DEBUG TOGGLERS
 - configure elevator for floors
-- make blinking behaviour exact the same as original
 - add elevator driving sound effect
 - add details to rooms
 - add online feature to set name of every room

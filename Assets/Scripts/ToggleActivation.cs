@@ -97,11 +97,11 @@ public class ToggleActivation : MonoBehaviour {
         }
         
         if (triggerOnStart) {
-            Toggle();
+            Trigger();
         }
     }
 
-    private void Toggle() {
+    public void Trigger() {
         foreach (GameObject section in activateObjects) {
             if (section == null) continue;
             section.SetActive(true);
@@ -124,7 +124,7 @@ public class ToggleActivation : MonoBehaviour {
 	
     void OnTriggerEnter(Collider col) {
         if (col.CompareTag(playerTag)) {
-            Toggle();
+            Trigger();
         }
     }
 

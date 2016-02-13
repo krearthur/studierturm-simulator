@@ -1,19 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public enum Floor {
-    MinusOne = 1 << 0,
-    Zero = 1 << 1,
-    One = 1 << 2,
-    Two = 1 << 3,
-    Three = 1 << 4,
-    Four = 1 << 5,
-    Five = 1 << 6,
-    Six = 1 << 7,
-    Seven = 1 << 8,
-    Eight = 1 << 9
-}
-
 public class Elevator : MonoBehaviour, SlidingDoorListener {
 
     private int targetFloors;
@@ -84,7 +71,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
             return;
         }
         if (positionDriver.running) {
-            Debug.Log(name + " driving towards floor: " + GetFloorNumber(currentTargetFloor));
+            Debug.Log(name + " driving towards floor: " + FloorUtility.Number(currentTargetFloor));
             positionDriver.Step(Time.deltaTime);
             // Also move carried objects
             Vector3 delta = positionDriver.position - transform.position;
@@ -97,7 +84,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         else {
             if (positionDriver.reachedTarget) {
                 positionDriver.Reset();
-                Debug.Log(name+" reached target floor: " + GetFloorNumber(currentTargetFloor));
+                Debug.Log(name + " reached target floor: " + FloorUtility.Number(currentTargetFloor));
                 currentFloor = currentTargetFloor;
                 driving = false;
             }
@@ -110,27 +97,11 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     }
 
     private Vector3 GetFloorPosition(Floor floor) {
-        switch (floor) {
-            case Floor.MinusOne: return floorPositions[0];
-            case Floor.Zero: return floorPositions[1];
-            case Floor.One: return floorPositions[2];
-            case Floor.Two: return floorPositions[3];
-            case Floor.Three: return floorPositions[4];
-            case Floor.Four: return floorPositions[5];
-            case Floor.Five: return floorPositions[6];
-            case Floor.Six: return floorPositions[7];
-            case Floor.Seven: return floorPositions[8];
-            case Floor.Eight: return floorPositions[9];
-            default:
-                {
-                    Debug.LogError("Invalid Floor: " + floor);
-                    return Vector3.zero;
-                }
-        }
+        return floorPositions[FloorUtility.Index(floor)];
     }
 
     private float CalculateDrivingTime() {
-        return drivingTimeForOneFloor * (Mathf.Abs(GetFloorNumber(currentFloor) - GetFloorNumber(currentTargetFloor)) );
+        return drivingTimeForOneFloor * (Mathf.Abs(FloorUtility.Number(currentFloor) - FloorUtility.Number(currentTargetFloor)) );
     }
 
     /// <summary>
@@ -138,7 +109,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     /// </summary>
     /// <returns></returns>
     public int GetDrivingDirection() {
-        return GetFloorNumber(currentFloor) - GetFloorNumber(currentTargetFloor);
+        return FloorUtility.Number(currentFloor) - FloorUtility.Number(currentTargetFloor);
     }
 
     private void CalculateNearestTargetFloor(int direction) {
@@ -165,39 +136,13 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     }
 
     private void SetTargetFloorPosition(Floor floor) {
-        switch (floor) {
-            case Floor.MinusOne: targetFloorPos = floorPositions[0]; break;
-            case Floor.Zero: targetFloorPos = floorPositions[1]; break;
-            case Floor.One: targetFloorPos = floorPositions[2]; break;
-            case Floor.Two: targetFloorPos = floorPositions[3]; break;
-            case Floor.Three: targetFloorPos = floorPositions[4]; break;
-            case Floor.Four: targetFloorPos = floorPositions[5]; break;
-            case Floor.Five: targetFloorPos = floorPositions[6]; break;
-            case Floor.Six: targetFloorPos = floorPositions[7]; break;
-            case Floor.Seven: targetFloorPos = floorPositions[8]; break;
-            case Floor.Eight: targetFloorPos = floorPositions[9]; break;
-        }
+        targetFloorPos = floorPositions[FloorUtility.Index(floor)];
     }
 
     private bool IsInTargets(Floor floor) {
         return ((int)floor & targetFloors) > 0;
     }
 
-    private int GetFloorNumber(Floor floor) {
-        switch (floor) {
-            case Floor.MinusOne: return -1;
-            case Floor.Zero: return 0;
-            case Floor.One: return 1;
-            case Floor.Two: return 2;
-            case Floor.Three: return 3;
-            case Floor.Four: return 4;
-            case Floor.Five: return 5;
-            case Floor.Six: return 6;
-            case Floor.Seven: return 7;
-            case Floor.Eight: return 8;
-            default: return 0;
-        }
-    }
 
     #endregion
     #region API_orders
