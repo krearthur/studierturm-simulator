@@ -1,135 +1,82 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public abstract class TriggerableComponent : MonoBehaviour {
+    public abstract void Trigger(int code);
+}
+
 /// <summary>
-///     Takes array of root GameObjects Names and 
-///     activates their sub GameObjects or colliders in sub GameObjects
-///     that match the list of given names, configured in the inspector of this MonoBehaviour.
-///     Note: if name providers are set, the names are added to the list, not replaced!
+///     Either sets objects active or inactive
 /// </summary>
-public class ToggleActivation : MonoBehaviour {
+public class ToggleActivation : TriggerableComponent {
     
-    public ToggleActivation copyInverseToggle;
 
-    public ToggleObjectsNamesProvider namesProviderActivation;
-    public ToggleObjectsNamesProvider namesProviderDeactivation;
+    public ToggleObjectsNamesProvider gameObjectsNamesProvider;
+    
+    public string[] rootGameObjectsNames;
 
-    public string[] rootsActivate;
-    public string[] rootsDeactivate;
+    public string[] toggleGameObjectsWithNames;
+    private GameObject[] toggleGameObjects;
 
-    public string[] activateWithNames;
-    private GameObject[] activateObjects;
-
-    public string[] activateCollidersWithNames;
-    private GameObject[] activateCollidersInGameObjects;
-
-    public string[] deactivateWithNames;
-    private GameObject[] deactivateObjects;
-
-    public string[] deactivateCollidersWithNames;
-    private GameObject[] deactivateCollidersInGameObjects;
-
-    public int depth = 2;
-
-    public string playerTag = "Player";
-    public bool triggerOnStart = false;
-
-	
+    public string[] toggleCollidersWithNames;
+    private GameObject[] toggleCollidersInGameObjects;
+    
+    public int hierarchyDepth = 2;
+    
 	void Start () {
 
-        // Copy inverse roots, name providers and names arrays from other ToggleActivation instances
-        if(copyInverseToggle != null) {
-            rootsActivate = copyInverseToggle.rootsDeactivate;
-            rootsDeactivate = copyInverseToggle.rootsActivate;
-
-            activateWithNames = copyInverseToggle.deactivateWithNames;
-            activateCollidersWithNames = copyInverseToggle.deactivateCollidersWithNames;
-
-            deactivateWithNames = copyInverseToggle.activateWithNames;
-            deactivateCollidersWithNames = copyInverseToggle.activateCollidersWithNames;
-
-            namesProviderActivation = copyInverseToggle.namesProviderDeactivation;
-            namesProviderDeactivation = copyInverseToggle.namesProviderActivation;
-        }
-
         // Name Providers, concatenate their names arrays with this instance ones
-        if (namesProviderActivation != null) {
-            ConcatenateArrays(ref activateWithNames, namesProviderActivation.gameObjectsWithNames);
-            ConcatenateArrays(ref activateCollidersWithNames, namesProviderActivation.collidersWithNames);
-        }
-        if (namesProviderDeactivation != null) {
-            ConcatenateArrays(ref deactivateWithNames, namesProviderDeactivation.gameObjectsWithNames);
-            ConcatenateArrays(ref deactivateCollidersWithNames, namesProviderDeactivation.collidersWithNames);
+        if (gameObjectsNamesProvider != null) {
+            ConcatenateArrays(ref toggleGameObjectsWithNames, gameObjectsNamesProvider.gameObjectsWithNames);
+            ConcatenateArrays(ref toggleCollidersWithNames, gameObjectsNamesProvider.collidersWithNames);
         }
 
         // Search for GameObjects with the names arrays
-        if (rootsActivate.Length > 0) {
-            activateObjects = new GameObject[activateWithNames.Length];
-            for (int i = 0; i < activateWithNames.Length; i++) {
-                for(int k = 0; k < rootsActivate.Length; k++) {
-                    activateObjects[i] = GameObject.Find(rootsActivate[k] + "/" + activateWithNames[i]);
+        if (rootGameObjectsNames.Length > 0) {
+            toggleGameObjects = new GameObject[toggleGameObjectsWithNames.Length];
+            for (int i = 0; i < toggleGameObjectsWithNames.Length; i++) {
+                for(int k = 0; k < rootGameObjectsNames.Length; k++) {
+                    toggleGameObjects[i] = GameObject.Find(rootGameObjectsNames[k] + "/" + toggleGameObjectsWithNames[i]);
                 }
                 
             }
 
-            activateCollidersInGameObjects = new GameObject[activateCollidersWithNames.Length];
-            for (int i = 0; i < activateCollidersWithNames.Length; i++) {
-                for (int k = 0; k < rootsActivate.Length; k++) {
-                    activateCollidersInGameObjects[i] = GameObject.Find(rootsActivate[k] + "/" + activateCollidersWithNames[i]);
-                }
-            }
-        }
-
-        if (rootsDeactivate.Length > 0) {
-            deactivateObjects = new GameObject[deactivateWithNames.Length];
-            for (int i = 0; i < deactivateWithNames.Length; i++) {
-                for (int k = 0; k < rootsDeactivate.Length; k++) {
-                    deactivateObjects[i] = GameObject.Find(rootsDeactivate[k] + "/" + deactivateWithNames[i]);
-                }
-            }
-
-            deactivateCollidersInGameObjects = new GameObject[deactivateCollidersInGameObjects.Length];
-            for (int i = 0; i < deactivateCollidersWithNames.Length; i++) {
-                for (int k = 0; k < rootsDeactivate.Length; k++) {
-                    deactivateCollidersInGameObjects[i] = GameObject.Find(rootsDeactivate[k] + "/" + deactivateCollidersWithNames[i]);
+            toggleCollidersInGameObjects = new GameObject[toggleCollidersWithNames.Length];
+            for (int i = 0; i < toggleCollidersWithNames.Length; i++) {
+                for (int k = 0; k < rootGameObjectsNames.Length; k++) {
+                    toggleCollidersInGameObjects[i] = GameObject.Find(rootGameObjectsNames[k] + "/" + toggleCollidersWithNames[i]);
                 }
             }
         }
         
-        if (triggerOnStart) {
-            Trigger();
-        }
     }
 
-    public void Trigger() {
-        foreach (GameObject section in activateObjects) {
-            if (section == null) continue;
-            section.SetActive(true);
-        }
-        foreach (GameObject section in deactivateObjects) {
-            if (section == null) continue;
-            section.SetActive(false);
-        }
+    override public void Trigger(int code) {
+        bool activate = code > 0 ? true :false;
         
-        foreach (GameObject section in activateCollidersInGameObjects) {
-            if (section == null) continue;
-            ActivateColliders(section.GetComponentsInChildren<Collider>(), 1);
+        if (toggleGameObjects != null) {
+            foreach (GameObject section in toggleGameObjects) {
+                if (section == null) continue;
+                section.SetActive(activate);
+            }
         }
-        foreach (GameObject section in deactivateCollidersInGameObjects) {
-            if (section == null) continue;
-            DeactivateColliders(section.GetComponentsInChildren<Collider>(), 1);
+        if (toggleCollidersInGameObjects != null) {
+            foreach (GameObject section in toggleCollidersInGameObjects) {
+                if (section == null) continue;
+                if (activate) {
+                    ActivateColliders(section.GetComponentsInChildren<Collider>(), 1);
+                }
+                else {
+                    DeactivateColliders(section.GetComponentsInChildren<Collider>(), 1);
+                }
+            }
         }
-        
+
     }
 	
-    void OnTriggerEnter(Collider col) {
-        if (col.CompareTag(playerTag)) {
-            Trigger();
-        }
-    }
 
     private void DeactivateColliders(Collider[] colliders, int level) {
-        if (level > depth) return;
+        if (level > hierarchyDepth) return;
         foreach (Collider collider in colliders) {
             collider.enabled = false;
             DeactivateColliders(collider.GetComponentsInChildren<Collider>(true), ++level);
@@ -137,7 +84,7 @@ public class ToggleActivation : MonoBehaviour {
     }
 
     private void ActivateColliders(Collider[] colliders, int level) {
-        if (level > depth) return;
+        if (level > hierarchyDepth) return;
         foreach (Collider collider in colliders) {
             collider.enabled = true;
             ActivateColliders(collider.GetComponentsInChildren<Collider>(true), ++level);
@@ -151,7 +98,7 @@ public class ToggleActivation : MonoBehaviour {
                 result[i] = a[i];
             }
             else {
-                result[i] = b[i];
+                result[i] = b[i - a.Length];
             }
         }
 

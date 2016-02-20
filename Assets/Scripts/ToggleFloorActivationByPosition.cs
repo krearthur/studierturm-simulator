@@ -7,8 +7,7 @@ using System.Collections;
 /// </summary>
 public class ToggleFloorActivationByPosition : MonoBehaviour {
 
-    public ToggleActivation[] enterFloorTogglers;
-    public ToggleActivation[] exitFloorTogglers;
+    public ToggleActivation[] floorTogglers;
 
     public float floorHeight = 3.103f;
     public float floor1PositionY = 0;
@@ -27,13 +26,16 @@ public class ToggleFloorActivationByPosition : MonoBehaviour {
 
 
 	    if(currentFloorNumber != lastFloorNumber) {
+//            Debug.Log("changed from floor " + lastFloorNumber + " to " + currentFloorNumber);
             // Player has changed floor
-            for(int i=0; i < enterFloorTogglers.Length; i++) {
-                if(currentFloorNumber-1 == i) {
-                    enterFloorTogglers[i].Trigger();
+            for(int i=0; i < floorTogglers.Length; i++) {
+                if(i - 1 == currentFloorNumber - 1 || i == currentFloorNumber - 1 || i + 1 == currentFloorNumber - 1 ) {
+                    //Debug.Log("activate floor " + (i+1));
+                    floorTogglers[i].Trigger(1);
                 }
                 else {
-                    exitFloorTogglers[i].Trigger();
+                    //Debug.Log("deactivate floor " + (i+1));
+                    floorTogglers[i].Trigger(0);
                 }
                 
             }
