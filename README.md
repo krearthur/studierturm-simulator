@@ -1,10 +1,10 @@
 # studierturm-simulator
-studierturm simulator trier, unity
+
 
 ## Data:
-floor height: 3.103 m
-floors: 8 + roof
-apartments/floor: 15
+- floor height: 3.103 m
+- floors: 8 + roof
+- apartments/floor: 15
 
 ## TODO:
 - create ground floor
