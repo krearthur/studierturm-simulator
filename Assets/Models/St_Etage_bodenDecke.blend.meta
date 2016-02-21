@@ -24,6 +24,14 @@ ModelImporter:
     100032: ceiling_007
     100034: ceiling_008
     100036: floor_003
+    100038: Zimmerboden_001
+    100040: Zimmerboden_002
+    100042: Zimmerboden_003
+    100044: Zimmerboden_004
+    100046: Zimmerboden_005
+    100048: Zimmerboden_006
+    100050: Zimmerboden_007
+    100052: Zimmerboden_008
     400000: badezimmer_boden
     400002: ceiling_000
     400004: ceiling_001
@@ -43,6 +51,14 @@ ModelImporter:
     400032: ceiling_007
     400034: ceiling_008
     400036: floor_003
+    400038: Zimmerboden_001
+    400040: Zimmerboden_002
+    400042: Zimmerboden_003
+    400044: Zimmerboden_004
+    400046: Zimmerboden_005
+    400048: Zimmerboden_006
+    400050: Zimmerboden_007
+    400052: Zimmerboden_008
     2300000: badezimmer_boden
     2300002: ceiling_000
     2300004: ceiling_001
@@ -61,6 +77,14 @@ ModelImporter:
     2300030: ceiling_007
     2300032: ceiling_008
     2300034: floor_003
+    2300036: Zimmerboden_001
+    2300038: Zimmerboden_002
+    2300040: Zimmerboden_003
+    2300042: Zimmerboden_004
+    2300044: Zimmerboden_005
+    2300046: Zimmerboden_006
+    2300048: Zimmerboden_007
+    2300050: Zimmerboden_008
     3300000: badezimmer_boden
     3300002: ceiling_000
     3300004: ceiling_001
@@ -79,6 +103,14 @@ ModelImporter:
     3300030: ceiling_007
     3300032: ceiling_008
     3300034: floor_003
+    3300036: Zimmerboden_001
+    3300038: Zimmerboden_002
+    3300040: Zimmerboden_003
+    3300042: Zimmerboden_004
+    3300044: Zimmerboden_005
+    3300046: Zimmerboden_006
+    3300048: Zimmerboden_007
+    3300050: Zimmerboden_008
     4300000: badezimmer_boden
     4300002: Zimmerboden
     4300004: floor_006
@@ -97,6 +129,14 @@ ModelImporter:
     4300030: ceiling_008
     4300032: ceiling_007
     4300034: floor_003
+    4300036: Zimmerboden_008
+    4300038: Zimmerboden_007
+    4300040: Zimmerboden_006
+    4300042: Zimmerboden_005
+    4300044: Zimmerboden_004
+    4300046: Zimmerboden_003
+    4300048: Zimmerboden_002
+    4300050: Zimmerboden_001
     6400000: badezimmer_boden
     6400002: ceiling_000
     6400004: ceiling_001
