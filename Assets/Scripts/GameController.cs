@@ -5,6 +5,7 @@ public class GameController : MonoBehaviour {
 
 
     public GameObject cursorCanvas;
+    public static float floorHeight = 3.103f;
 
 	// Use this for initialization
 	void Start () {

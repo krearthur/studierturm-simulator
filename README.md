@@ -8,14 +8,14 @@ apartments/floor: 15
 
 ## TODO:
 - create ground floor
-- configure colors, textures for floors
-- configure elevator for floors
 - add elevator driving sound effect
 - add details to rooms
 - add online feature to set name of every room
 - add title screen where one can see the whole building with names
 
 ## DONE:
+- configure elevator for floors
+- configure colors, textures for floors
 - configure activator/deactivators for floors 
 - create activator/deactivators for  floors
 - create other 7 floors from floor 8 

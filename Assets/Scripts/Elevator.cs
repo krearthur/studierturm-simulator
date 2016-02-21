@@ -15,17 +15,18 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
 
     public Collider doorColliders;
 
+
     public Vector3[] floorPositions = new Vector3[10] {
-        new Vector3(4,0,4),
-        new Vector3(4,2,4),
-        new Vector3(4,4,4),
-        new Vector3(4,6,4),
-        new Vector3(4,8,4),
-        new Vector3(4,10,4),
-        new Vector3(4,12,4),
-        new Vector3(4,14,4),
-        new Vector3(4,16,4),
-        new Vector3(4,18,4)
+        new Vector3(0,0,0),
+        new Vector3(0,2,0),
+        new Vector3(0,4,0),
+        new Vector3(0,6,0),
+        new Vector3(0,8,0),
+        new Vector3(0,10,0),
+        new Vector3(0,12,0),
+        new Vector3(0,14,0),
+        new Vector3(0,16,0),
+        new Vector3(0,18,0)
         };
 
     private Vector3 targetFloorPos;
@@ -37,6 +38,11 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         foreach(SlidingDoorStateBehaviour behaviour in animator.GetBehaviours<SlidingDoorStateBehaviour>()) {
             behaviour.AddListener(this);
         }
+
+        for(int i=0; i<floorPositions.Length; i++) {
+            floorPositions[i].y = floorPositions[0].y + i * GameController.floorHeight;
+        }
+
         currentTargetFloor = currentFloor;
         positionDriver = new TransformAnimator();
         targetFloors = 0;
@@ -67,11 +73,11 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
 
     private void DoDriving() {
         if (IsClosed() == false) {
-            Debug.Log(name + " not closed! cancel driving..");
+            //Debug.Log(name + " not closed! cancel driving..");
             return;
         }
         if (positionDriver.running) {
-            Debug.Log(name + " driving towards floor: " + FloorUtility.Number(currentTargetFloor));
+            //Debug.Log(name + " driving towards floor: " + FloorUtility.Number(currentTargetFloor));
             positionDriver.Step(Time.deltaTime);
             // Also move carried objects
             Vector3 delta = positionDriver.position - transform.position;
@@ -84,12 +90,12 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         else {
             if (positionDriver.reachedTarget) {
                 positionDriver.Reset();
-                Debug.Log(name + " reached target floor: " + FloorUtility.Number(currentTargetFloor));
+                //Debug.Log(name + " reached target floor: " + FloorUtility.Number(currentTargetFloor));
                 currentFloor = currentTargetFloor;
                 driving = false;
             }
             else {
-                Debug.Log(name + " start driving!");
+                //Debug.Log(name + " start driving!");
                 positionDriver.Init(transform.position, GetFloorPosition(currentTargetFloor), CalculateDrivingTime());
                 positionDriver.Start();
             }
