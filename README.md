@@ -8,12 +8,13 @@
 
 ## TODO:
 - create ground floor
-- add elevator driving sound effect
 - add details to rooms
-- add online feature to set name of every room
-- add title screen where one can see the whole building with names
+- add title screen where one can see the whole building
 
 ## DONE:
+- add elevator driving sound effect
+- add footsteps sound 
+- make lookaround smoother
 - elevator LED display
 - fixed elevator logic issues(uncommon usage)
 - prepare occlusion culling 

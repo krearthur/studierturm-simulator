@@ -14,8 +14,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     public ObjectsInTrigger carriedObjects;
 
     public Collider doorColliders;
-
-
+    
     public Vector3[] floorPositions = new Vector3[10] {
         new Vector3(0,0,0), // floor -1
         new Vector3(0,2,0), // floor 0
@@ -28,6 +27,8 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         new Vector3(0,16,0),
         new Vector3(0,18,0)
         };
+
+    new public AudioSource audio;
 
     private Vector3 targetFloorPos;
 
@@ -54,7 +55,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     void Update() {
         if (IsStanding()) {
             if (IsInTargets(currentFloor)) { // just arrived
-
+             
                 // remove current floor from target floor
                 targetFloors &= ~(int)currentFloor;
 
@@ -67,7 +68,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
             else if(targetFloors > 0) { // any floors left in the pool of target floors?
                 CalculateNearestTargetFloor();
                 driving = true;
-
+                
                 if (GetDrivingDirection() > 0) {
                     foreach (ElevatorListener listener in listeners) {
                         listener.DrivingDown();
@@ -118,13 +119,14 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
                 positionDriver.Reset();
                 //Debug.Log(name + " reached target floor: " + FloorUtility.Number(currentTargetFloor));
                 currentFloor = currentTargetFloor;
-                
+                audio.Stop();
                 driving = false;
             }
             else {
                 //Debug.Log(name + " start driving!");
                 positionDriver.Init(transform.position, GetFloorPosition(currentTargetFloor), CalculateDrivingTime());
                 positionDriver.Start();
+                audio.Play();
             }
         }
     }
