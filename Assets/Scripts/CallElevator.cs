@@ -120,13 +120,13 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     }
 
     void ElevatorListener.DrivingUp() {
-        Debug.Log("start driving up");
+        //Debug.Log("start driving up");
         StatusBtnLight(false);
         
     }
 
     void ElevatorListener.DrivingDown() {
-        Debug.Log("start driving down");
+        //Debug.Log("start driving down");
         StatusBtnLight(false);
     }
 
