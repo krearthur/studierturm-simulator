@@ -9,7 +9,7 @@ public class ToggleFloorActivationByPosition : MonoBehaviour {
 
     public ToggleActivation[] floorTogglers;
 
-    public float floorHeight = 3.103f;
+
     public float floor1PositionY = 0;
     
     public int currentFloorNumber;
@@ -22,7 +22,7 @@ public class ToggleFloorActivationByPosition : MonoBehaviour {
 	void Update () {
 
         lastFloorNumber = currentFloorNumber;
-        currentFloorNumber = 1+ (int)((observedObject.position.y - floor1PositionY) / floorHeight);
+        currentFloorNumber = 1+ (int)((observedObject.position.y - floor1PositionY) / GameController.floorHeight);
 
 
 	    if(currentFloorNumber != lastFloorNumber) {

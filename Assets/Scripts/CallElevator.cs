@@ -20,7 +20,7 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     private Color buttonsInActiveColor;
     
     private Renderer callButtonRend;
-    private AudioSource audio;
+    new private AudioSource audio;
 
     public Collider doorColliders;
 
@@ -50,7 +50,7 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
             currentBlinkTime += Time.deltaTime;
             if (currentBlinkTime >= blinkInterval) {
                 currentBlinkTime = 0;
-                StatusBtnLight(!statusBtnIsOn);
+                CallBtnLight(!callBtnIsOn);
             }
         }
     }
@@ -75,25 +75,25 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     }
 
     void SlidingDoorListener.DoorOpened() {
-        
+        blinking = false;
+        CallBtnLight(false);
 
     }
 
     void SlidingDoorListener.DoorClosed() {
-        blinking = false;
-        StatusBtnLight(blinking);
-        CallBtnLight(blinking);
+
     }
 
 
     void ElevatorListener.ElevatorOpening() {
-        if (interruptToOpen) {
-            interruptToOpen = false;
+        if (elevator.currentFloor == floorOfCallButton) {
+            if (interruptToOpen) {
+                interruptToOpen = false;
+            }
+            else {
+                animator.SetTrigger("Open");
+            }
         }
-        else {
-            animator.SetTrigger("Open");
-        }
-        
     }
 
     void ElevatorListener.ElevatorClosing() {
@@ -101,8 +101,8 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     }
 
     void ElevatorListener.FloorArrived(Floor arrived) {
-        StatusBtnLight(true);
         if (floorOfCallButton == arrived) {
+            StatusBtnLight(true);
             blinking = true;
         }
     }
@@ -120,16 +120,20 @@ public class CallElevator : MonoBehaviour, SlidingDoorListener, ElevatorListener
     }
 
     void ElevatorListener.DrivingUp() {
+        Debug.Log("start driving up");
+        StatusBtnLight(false);
         
     }
 
     void ElevatorListener.DrivingDown() {
-        
+        Debug.Log("start driving down");
+        StatusBtnLight(false);
     }
 
     public void Interact(GameObject source) {
         audio.PlayOneShot(buttonClickSound);
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Closing")) {
+           // Debug.Log("interrupt closing");
             InterruptClosing();
         }
         else if (!waitingForElevator && animator.GetCurrentAnimatorStateInfo(0).IsName("Closed")) {

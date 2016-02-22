@@ -17,10 +17,10 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
 
 
     public Vector3[] floorPositions = new Vector3[10] {
-        new Vector3(0,0,0),
-        new Vector3(0,2,0),
-        new Vector3(0,4,0),
-        new Vector3(0,6,0),
+        new Vector3(0,0,0), // floor -1
+        new Vector3(0,2,0), // floor 0
+        new Vector3(0,4,0), // floor 1
+        new Vector3(0,6,0), // ...
         new Vector3(0,8,0),
         new Vector3(0,10,0),
         new Vector3(0,12,0),
@@ -53,12 +53,30 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     // Update is called once per frame
     void Update() {
         if (IsStanding()) {
-            if (targetFloors>0 && IsInTargets(currentFloor)) {
+            if (IsInTargets(currentFloor)) { // just arrived
+
                 // remove current floor from target floor
                 targetFloors &= ~(int)currentFloor;
+
+
                 if (IsClosed()) {
                     animator.SetTrigger("OpenTrigger");
                     FloorArrived();
+                }
+            }
+            else if(targetFloors > 0) { // any floors left in the pool of target floors?
+                CalculateNearestTargetFloor();
+                driving = true;
+
+                if (GetDrivingDirection() > 0) {
+                    foreach (ElevatorListener listener in listeners) {
+                        listener.DrivingDown();
+                    }
+                }
+                else if (GetDrivingDirection() < 0) {
+                    foreach (ElevatorListener listener in listeners) {
+                        listener.DrivingUp();
+                    }
                 }
             }
         }
@@ -85,13 +103,22 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
                 go.transform.position += delta;
             }
             transform.position += delta;
-            
+
+            Floor tmp = currentFloor;
+            currentFloor = FloorUtility.FloorForNumber(1 + (int)((transform.position.y - floorPositions[2].y) / GameController.floorHeight));
+            if(tmp != currentFloor) {
+                // passed floor
+                foreach(ElevatorListener li in listeners) {
+                    li.FloorPassed(currentFloor);
+                }
+            }
         }
         else {
             if (positionDriver.reachedTarget) {
                 positionDriver.Reset();
                 //Debug.Log(name + " reached target floor: " + FloorUtility.Number(currentTargetFloor));
                 currentFloor = currentTargetFloor;
+                
                 driving = false;
             }
             else {
@@ -118,34 +145,42 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
         return FloorUtility.Number(currentFloor) - FloorUtility.Number(currentTargetFloor);
     }
 
-    private void CalculateNearestTargetFloor(int direction) {
-        for (int floors = 0; floors < 9; floors++) {
-            Floor nextTargetFloor = MoveFromCurrentFloor(floors, direction);
-            if (IsInTargets(nextTargetFloor)) {
+    private void CalculateNearestTargetFloor() {
+        int direction = GetDrivingDirection();
+
+        int curFlorNum = FloorUtility.Number(currentFloor);
+        int maxUp = 8 - curFlorNum;
+        int maxDown = curFlorNum - 1;
+
+        for (int floorStep = 0; floorStep < 8; floorStep++) {
+            // strategy: take the first match
+            Floor nextFloor = currentFloor;
+
+            if ( (!driving || direction < 0) && floorStep < maxUp) {
+                nextFloor = FloorUtility.FloorForNumber(curFlorNum + floorStep);
+            }
+            if ( (!driving || direction > 0) && floorStep < maxDown) {
+                nextFloor = FloorUtility.FloorForNumber(curFlorNum - floorStep);
+            }
+           
+            
+
+            if (IsInTargets(nextFloor)) {
                 // found nearest target floor
-                currentTargetFloor = nextTargetFloor;
-                SetTargetFloorPosition(nextTargetFloor);
+                currentTargetFloor = nextFloor;
+                SetTargetFloorPosition(nextFloor);
                 break;
             }
+
         }
     }
     
-    private Floor MoveFromCurrentFloor(int floors, int direction) {
-        if (direction < 0) {
-            return (Floor)((int)currentFloor << floors);
-        }
-        else if (direction > 0) {
-            return (Floor)((int)currentFloor >> floors);
-        }
-
-        return currentFloor;
-    }
 
     private void SetTargetFloorPosition(Floor floor) {
         targetFloorPos = floorPositions[FloorUtility.Index(floor)];
     }
 
-    private bool IsInTargets(Floor floor) {
+    public bool IsInTargets(Floor floor) {
         return ((int)floor & targetFloors) > 0;
     }
 
@@ -156,23 +191,18 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     public void CallToFloor(Floor floor) {
         targetFloors |= (int)floor;
         if (IsStanding()) {
-            driving = true;
-            if ((int)currentFloor > (int)floor) {
-                foreach (ElevatorListener listener in listeners) {
-                    listener.DrivingDown();
-                }
-            }
-            else if ((int)currentFloor < (int)floor) {
-                foreach (ElevatorListener listener in listeners) {
-                    listener.DrivingUp();
-                }
-            }
+            currentTargetFloor = floor;
         }
-        CalculateNearestTargetFloor((int)currentFloor - (int)floor);
+        else {
+            CalculateNearestTargetFloor();
+        }
+
     }
+
     public void AddListener(ElevatorListener lis) {
         listeners.Add(lis);
     }
+
     public void InterruptClosing(float normTime) {
         animator.Play("Opening", 0, normTime);
     }
@@ -199,7 +229,7 @@ public class Elevator : MonoBehaviour, SlidingDoorListener {
     #region API_queries
 
     public bool IsStanding() {
-        return GetDrivingDirection() == 0;
+        return !driving;
     }
 
     public bool IsClosed() {

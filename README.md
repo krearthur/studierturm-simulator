@@ -14,6 +14,7 @@
 - add title screen where one can see the whole building with names
 
 ## DONE:
+- fixed elevator logic issues(uncommon usage)
 - prepare occlusion culling 
 - configure elevator for floors
 - configure colors, textures for floors
