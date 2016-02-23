@@ -7,11 +7,11 @@
 - apartments/floor: 15
 
 ## TODO:
-- create ground floor
 - add details to rooms
 - add title screen where one can see the whole building
 
 ## DONE:
+- create ground floor
 - add elevator driving sound effect
 - add footsteps sound 
 - make lookaround smoother
